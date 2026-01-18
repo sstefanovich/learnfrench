@@ -61,6 +61,11 @@ function Matching({ categoryId, onComplete }) {
         setScore(prev => prev + 1);
         markWordLearned(selectedLeft.id);
         
+        // Automatically pronounce the French word when match is made
+        if (isAvailable() && selectedLeft.french) {
+          speak(selectedLeft.french);
+        }
+        
         // Reset selection after a brief delay
         setTimeout(() => {
           setSelectedLeft(null);

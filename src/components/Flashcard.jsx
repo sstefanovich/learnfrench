@@ -9,11 +9,41 @@ function Flashcard({ categoryId, onComplete }) {
   const [flipped, setFlipped] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [words, setWords] = useState([]);
   
   const category = vocabularyData.categories.find(cat => cat.id === categoryId);
-  const words = category?.words || [];
   const progress = getProgress();
   const learnedWords = progress.learnedWords || [];
+  
+  // Function to shuffle an array (Fisher-Yates shuffle)
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+  
+  // Initialize random selection of words when component mounts or category changes
+  useEffect(() => {
+    if (category?.words) {
+      const allWords = category.words;
+      // Randomly select up to 25 words, or all words if there are fewer than 25
+      const maxWords = 25;
+      const selectedCount = Math.min(maxWords, allWords.length);
+      
+      // Create a shuffled copy of all words, then take the first selectedCount
+      const shuffled = shuffleArray(allWords);
+      const selectedWords = shuffled.slice(0, selectedCount);
+      
+      setWords(selectedWords);
+      setCurrentIndex(0);
+      setCorrectCount(0);
+      setFlipped(false);
+      setShowResult(false);
+    }
+  }, [categoryId]);
   
   const currentWord = words[currentIndex];
   const isComplete = currentIndex >= words.length;
@@ -25,6 +55,18 @@ function Flashcard({ categoryId, onComplete }) {
     // Stop any ongoing speech when card changes
     stop();
   }, [currentIndex]);
+  
+  // Automatically pronounce when card is flipped to show English side
+  useEffect(() => {
+    if (flipped && currentWord && isAvailable()) {
+      // Small delay to let the flip animation complete
+      const timeoutId = setTimeout(() => {
+        speak(currentWord.french);
+      }, 300);
+      
+      return () => clearTimeout(timeoutId);
+    }
+  }, [flipped, currentWord]);
   
   const handleSpeak = (e) => {
     e.stopPropagation(); // Prevent card flip when clicking speaker

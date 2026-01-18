@@ -1,5 +1,7 @@
 // Text-to-speech utility using Web Speech API
 
+import { getSettings } from './settingsStorage';
+
 let synth = null;
 let voices = [];
 let frenchVoice = null;
@@ -52,8 +54,12 @@ export const speak = (text, options = {}) => {
     utterance.voice = frenchVoice;
   }
   
-  // Set options
-  utterance.rate = options.rate || 0.9; // Slightly slower for clarity
+  // Get user settings for pronunciation speed
+  const settings = getSettings();
+  const defaultRate = settings.pronunciationSpeed || 0.8;
+  
+  // Set options - use options.rate if provided, otherwise use settings, otherwise default
+  utterance.rate = options.rate || defaultRate;
   utterance.pitch = options.pitch || 1;
   utterance.volume = options.volume || 1;
   

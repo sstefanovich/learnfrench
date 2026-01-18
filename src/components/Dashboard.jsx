@@ -1,12 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import vocabularyData from '../data/vocabulary.json';
 import { getProgress } from '../utils/progressStorage';
+import { getSettings, updatePronunciationSpeed } from '../utils/settingsStorage';
+import { speak, isAvailable } from '../utils/speech';
 import './Dashboard.css';
 
 function Dashboard({ onSelectCategory, onSelectGameMode }) {
   const progress = getProgress();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedMode, setSelectedMode] = useState(null);
+  const [showSettings, setShowSettings] = useState(false);
+  const [pronunciationSpeed, setPronunciationSpeed] = useState(0.8);
+  
+  useEffect(() => {
+    const settings = getSettings();
+    setPronunciationSpeed(settings.pronunciationSpeed || 0.8);
+  }, []);
   
   const handleCategorySelect = (categoryId) => {
     setSelectedCategory(categoryId);
@@ -34,12 +43,105 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
     return totalWords > 0 ? Math.round((learnedInCategory / totalWords) * 100) : 0;
   };
   
+  const handleSpeedChange = (event) => {
+    const newSpeed = parseFloat(event.target.value);
+    setPronunciationSpeed(newSpeed);
+    updatePronunciationSpeed(newSpeed);
+    
+    // Test pronunciation if available
+    if (isAvailable()) {
+      speak('Bonjour', { rate: newSpeed });
+    }
+  };
+  
+  const getSpeedLabel = (speed) => {
+    if (speed <= 0.5) return 'Very Slow';
+    if (speed <= 0.7) return 'Slow';
+    if (speed <= 0.9) return 'Moderate';
+    if (speed <= 1.1) return 'Normal';
+    if (speed <= 1.3) return 'Fast';
+    return 'Very Fast';
+  };
+  
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>🇫🇷 Learn French for Vacation</h1>
+        <div className="dashboard-header-top">
+          <div className="dashboard-header-top-left"></div>
+          <h1 className="dashboard-header-title">🇫🇷 Learn French for Vacation</h1>
+          <div className="dashboard-header-top-right">
+            <button
+              className="settings-button"
+              onClick={() => setShowSettings(!showSettings)}
+              title="Settings"
+            >
+              ⚙️
+            </button>
+          </div>
+        </div>
         <p className="subtitle">Master essential French vocabulary for your trip!</p>
       </div>
+      
+      {showSettings && (
+        <div className="settings-panel">
+          <div className="settings-header">
+            <h3>⚙️ Settings</h3>
+            <button
+              className="close-settings-button"
+              onClick={() => setShowSettings(false)}
+              aria-label="Close settings"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <div className="settings-content">
+            <div className="setting-item">
+              <label htmlFor="pronunciation-speed">
+                Pronunciation Speed: <strong>{getSpeedLabel(pronunciationSpeed)}</strong> ({pronunciationSpeed.toFixed(2)}x)
+              </label>
+              <div className="speed-control">
+                <span className="speed-label">Slow</span>
+                <input
+                  id="pronunciation-speed"
+                  type="range"
+                  min="0.3"
+                  max="1.5"
+                  step="0.05"
+                  value={pronunciationSpeed}
+                  onChange={handleSpeedChange}
+                  className="speed-slider"
+                />
+                <span className="speed-label">Fast</span>
+              </div>
+              <p className="setting-description">
+                Adjust how fast French words are pronounced. Current speed: {Math.round(pronunciationSpeed * 100)}% of normal speed.
+              </p>
+            </div>
+            
+            <div className="setting-item">
+              <button
+                className="test-pronunciation-button"
+                onClick={() => {
+                  if (isAvailable()) {
+                    speak('Bonjour, comment allez-vous?', { rate: pronunciationSpeed });
+                  } else {
+                    alert('Speech synthesis is not available in your browser.');
+                  }
+                }}
+                disabled={!isAvailable()}
+              >
+                🔊 Test Pronunciation
+              </button>
+              {!isAvailable() && (
+                <p className="setting-description" style={{ color: '#999', fontSize: '0.85rem' }}>
+                  Speech synthesis is not available in your browser.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
       
       <div className="dashboard-stats">
         <div className="stat-card">

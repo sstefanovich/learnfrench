@@ -1,4 +1,4 @@
-# 🇫🇷 Learn French for Vacation
+# Learn the French Basics
 
 An interactive web application to learn essential French vocabulary for vacation planning. Practice greetings, numbers, travel terms, dining, shopping, and more through engaging game modes.
 
