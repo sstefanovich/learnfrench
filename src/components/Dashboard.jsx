@@ -68,7 +68,7 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
       <div className="dashboard-header">
         <div className="dashboard-header-top">
           <div className="dashboard-header-top-left"></div>
-          <h1 className="dashboard-header-title">🇫🇷 Learn French for Vacation</h1>
+          <h1 className="dashboard-header-title">Learn the French Basics</h1>
           <div className="dashboard-header-top-right">
             <button
               className="settings-button"
