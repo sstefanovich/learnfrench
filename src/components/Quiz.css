@@ -65,6 +65,14 @@
   gap: 1rem;
 }
 
+.question-pronunciation-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
 .question-word h3 {
   font-size: 2.5rem;
   margin: 0;
@@ -125,6 +133,53 @@
   min-height: 80px;
 }
 
+.answer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.answer-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.answer-pronunciation {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.answer-speaker-button {
+  background: rgba(102, 126, 234, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.answer-speaker-button:hover {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: scale(1.1);
+}
+
+.quiz-button {
+  position: relative;
+}
+
 .quiz-button:hover:not(:disabled) {
   border-color: #4a90e2;
   background: #f0f7ff;
@@ -171,6 +226,27 @@
 .result-message.incorrect {
   background: #f8d7da;
   color: #721c24;
+}
+
+.result-message p {
+  margin: 0.5rem 0;
+}
+
+.correct-answer {
+  margin-top: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.correct-answer strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pronunciation-hint {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+  font-weight: normal;
 }
 
 @keyframes slideIn {

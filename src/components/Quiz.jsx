@@ -94,9 +94,10 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
     }
   }, [currentIndex, questions]);
   
-  const handleSpeak = () => {
-    if (currentQuestion && isFrenchToEnglish) {
-      speak(currentQuestion.word.french);
+  const handleSpeak = (wordToSpeak = null) => {
+    const word = wordToSpeak || (currentQuestion ? currentQuestion.word.french : null);
+    if (word && isAvailable()) {
+      speak(word);
     }
   };
   
@@ -198,6 +199,23 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           {isFrenchToEnglish && currentQuestion.word.pronunciation && (
             <p className="pronunciation">/{currentQuestion.word.pronunciation}/</p>
           )}
+          {!isFrenchToEnglish && (
+            <div className="question-pronunciation-section">
+              {currentQuestion.word.pronunciation && (
+                <p className="pronunciation">Pronunciation: /{currentQuestion.word.pronunciation}/</p>
+              )}
+              {isAvailable() && (
+                <button 
+                  className="speaker-button"
+                  onClick={() => handleSpeak()}
+                  aria-label="Listen to French pronunciation"
+                  title="Listen to French pronunciation"
+                >
+                  🔊
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
       
@@ -206,6 +224,7 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           const answerText = isFrenchToEnglish 
             ? answer.word.english 
             : answer.word.french;
+          const showPronunciation = !isFrenchToEnglish && answer.word.pronunciation;
           
           let buttonClass = 'quiz-button';
           if (showResult) {
@@ -225,7 +244,25 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
               onClick={() => handleAnswerSelect(answer)}
               disabled={showResult}
             >
-              {answerText}
+              <div className="answer-content">
+                <span className="answer-text">{answerText}</span>
+                {showPronunciation && (
+                  <span className="answer-pronunciation">/{answer.word.pronunciation}/</span>
+                )}
+              </div>
+              {!isFrenchToEnglish && isAvailable() && !showResult && (
+                <button
+                  className="answer-speaker-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleSpeak(answer.word.french);
+                  }}
+                  aria-label="Listen to pronunciation"
+                  title="Listen to pronunciation"
+                >
+                  🔊
+                </button>
+              )}
               {showResult && answer.isCorrect && <span className="check-mark">✓</span>}
               {showResult && answer === selectedAnswer && !answer.isCorrect && (
                 <span className="x-mark">✗</span>
@@ -240,9 +277,15 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           {selectedAnswer?.isCorrect ? (
             <p>✓ Correct! Great job!</p>
           ) : (
-            <p>✗ Not quite. The correct answer is: {
-              shuffledAnswers.find(a => a.isCorrect).word[isFrenchToEnglish ? 'english' : 'french']
-            }</p>
+            <div>
+              <p>✗ Not quite. The correct answer is:</p>
+              <p className="correct-answer">
+                <strong>{shuffledAnswers.find(a => a.isCorrect).word[isFrenchToEnglish ? 'english' : 'french']}</strong>
+                {!isFrenchToEnglish && shuffledAnswers.find(a => a.isCorrect).word.pronunciation && (
+                  <span className="pronunciation-hint"> /{shuffledAnswers.find(a => a.isCorrect).word.pronunciation}/</span>
+                )}
+              </p>
+            </div>
           )}
         </div>
       )}
