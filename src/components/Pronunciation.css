@@ -1,0 +1,369 @@
+.pronunciation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pronunciation-progress {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.pronunciation-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.progress-text,
+.score-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.pronunciation-word {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pronunciation-word h2 {
+  margin: 0 0 2rem 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.word-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.word-display h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #667eea;
+  font-weight: 700;
+}
+
+.word-hint {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.french-word-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.french-word-display strong {
+  font-size: 3rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.pronunciation-guide {
+  font-size: 1.5rem;
+  color: #999;
+  font-style: italic;
+}
+
+.word-example {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  max-width: 600px;
+}
+
+.pronunciation-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hear-button,
+.listen-button,
+.skip-button {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 180px;
+}
+
+.hear-button {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.hear-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
+}
+
+.listen-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.listen-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.listen-button.listening {
+  background: linear-gradient(135deg, #ee0979 0%, #f5576c 100%);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.skip-button {
+  background: #f5f5f5;
+  color: #666;
+  border: 2px solid #e0e0e0;
+}
+
+.skip-button:hover:not(:disabled) {
+  background: #e0e0e0;
+  border-color: #ccc;
+}
+
+.hear-button:disabled,
+.listen-button:disabled,
+.skip-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.listening-status {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wave-animation {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  height: 40px;
+  align-items: center;
+}
+
+.wave-animation span {
+  width: 4px;
+  background: white;
+  border-radius: 2px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.wave-animation span:nth-child(1) { animation-delay: 0s; height: 20px; }
+.wave-animation span:nth-child(2) { animation-delay: 0.1s; height: 30px; }
+.wave-animation span:nth-child(3) { animation-delay: 0.2s; height: 40px; }
+.wave-animation span:nth-child(4) { animation-delay: 0.3s; height: 30px; }
+.wave-animation span:nth-child(5) { animation-delay: 0.4s; height: 20px; }
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.listening-status p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.listening-indicator {
+  animation: bounce 1s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.user-speech-display {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.pronunciation-result {
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  animation: slideIn 0.3s ease;
+}
+
+.pronunciation-result.correct {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.pronunciation-result.incorrect {
+  background: linear-gradient(135deg, #ee0979 0%, #f5576c 100%);
+  color: white;
+}
+
+.result-icon {
+  font-size: 5rem;
+  margin: 0 0 1rem 0;
+}
+
+.result-message {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.result-detail {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  opacity: 0.95;
+}
+
+.try-again-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.try-again-button:hover {
+  background: white;
+  color: #ee0979;
+}
+
+.pronunciation-help {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.pronunciation-help p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.pronunciation-error {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pronunciation-error h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.pronunciation-error ul {
+  text-align: left;
+  display: inline-block;
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.pronunciation-error li {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .pronunciation-container {
+    padding: 1rem;
+  }
+  
+  .french-word-display strong {
+    font-size: 2rem;
+  }
+  
+  .pronunciation-controls {
+    flex-direction: column;
+  }
+  
+  .hear-button,
+  .listen-button,
+  .skip-button {
+    width: 100%;
+  }
+}

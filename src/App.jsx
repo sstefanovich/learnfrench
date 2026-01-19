@@ -4,6 +4,8 @@ import Dashboard from './components/Dashboard';
 import Flashcard from './components/Flashcard';
 import Quiz from './components/Quiz';
 import Matching from './components/Matching';
+import Typing from './components/Typing';
+import Pronunciation from './components/Pronunciation';
 import GameResults from './components/GameResults';
 import './App.css';
 
@@ -12,14 +14,17 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedGameMode, setSelectedGameMode] = useState(null);
   const [gameResults, setGameResults] = useState(null);
+  const [gameOptions, setGameOptions] = useState({});
   
-  const handleCategorySelect = (categoryId) => {
+  const handleCategorySelect = (categoryId, options = {}) => {
     setSelectedCategory(categoryId);
+    setGameOptions(options);
     setCurrentView('game');
   };
   
-  const handleGameModeSelect = (mode) => {
+  const handleGameModeSelect = (mode, options = {}) => {
     setSelectedGameMode(mode);
+    setGameOptions(options);
     setCurrentView('game');
   };
   
@@ -53,7 +58,9 @@ function App() {
     
     const commonProps = {
       categoryId: selectedCategory,
-      onComplete: handleGameComplete
+      onComplete: handleGameComplete,
+      practiceWeakWords: gameOptions.practiceWeakWords || false,
+      difficulty: gameOptions.difficulty || 'medium'
     };
     
     switch (selectedGameMode) {
@@ -63,6 +70,10 @@ function App() {
         return <Quiz {...commonProps} />;
       case 'matching':
         return <Matching {...commonProps} />;
+      case 'typing':
+        return <Typing {...commonProps} />;
+      case 'pronunciation':
+        return <Pronunciation {...commonProps} />;
       default:
         return null;
     }

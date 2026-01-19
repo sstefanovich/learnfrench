@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import vocabularyData from '../data/vocabulary.json';
-import { markWordLearned, getProgress } from '../utils/progressStorage';
+import { markWordLearned, markWordCorrect, markWordIncorrect, getWordsForReview, getProgress } from '../utils/progressStorage';
 import { speak, stop, isAvailable } from '../utils/speech';
+import { playCorrectSound, playIncorrectSound, playFlipSound } from '../utils/sounds';
+import { getSettings } from '../utils/settingsStorage';
 import './Flashcard.css';
 
-function Flashcard({ categoryId, onComplete }) {
+function Flashcard({ categoryId, onComplete, practiceWeakWords = false, difficulty = 'medium' }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -14,6 +16,7 @@ function Flashcard({ categoryId, onComplete }) {
   const category = vocabularyData.categories.find(cat => cat.id === categoryId);
   const progress = getProgress();
   const learnedWords = progress.learnedWords || [];
+  const settings = getSettings();
   
   // Function to shuffle an array (Fisher-Yates shuffle)
   const shuffleArray = (array) => {
@@ -25,12 +28,48 @@ function Flashcard({ categoryId, onComplete }) {
     return shuffled;
   };
   
+  // Filter words based on difficulty level
+  const filterByDifficulty = (words) => {
+    if (difficulty === 'easy') {
+      // Only show learned words
+      return words.filter(w => learnedWords.includes(w.id));
+    } else if (difficulty === 'hard') {
+      // Only show unlearned or weak words
+      return words.filter(w => !learnedWords.includes(w.id) || progress.weakWords?.includes(w.id));
+    } else {
+      // Medium: mix of all words
+      return words;
+    }
+  };
+  
   // Initialize random selection of words when component mounts or category changes
   useEffect(() => {
     if (category?.words) {
-      const allWords = category.words;
-      // Randomly select up to 25 words, or all words if there are fewer than 25
-      const maxWords = 25;
+      let allWords = category.words;
+      
+      // Filter for weak words mode
+      if (practiceWeakWords) {
+        const weakWords = allWords.filter(w => progress.weakWords?.includes(w.id));
+        if (weakWords.length > 0) {
+          allWords = weakWords;
+        }
+      }
+      
+      // Filter by difficulty
+      allWords = filterByDifficulty(allWords);
+      
+      // Get words for review if using spaced repetition
+      if (!practiceWeakWords && difficulty === 'medium') {
+        const reviewWords = getWordsForReview(allWords);
+        if (reviewWords.length > 0) {
+          // Mix review words with other words
+          const otherWords = allWords.filter(w => !reviewWords.some(rw => rw.id === w.id));
+          allWords = [...reviewWords, ...shuffledArray(otherWords).slice(0, Math.max(0, allWords.length - reviewWords.length))];
+        }
+      }
+      
+      // Use customizable count from settings
+      const maxWords = settings.flashcardCount || 25;
       const selectedCount = Math.min(maxWords, allWords.length);
       
       // Create a shuffled copy of all words, then take the first selectedCount
@@ -43,7 +82,38 @@ function Flashcard({ categoryId, onComplete }) {
       setFlipped(false);
       setShowResult(false);
     }
-  }, [categoryId]);
+  }, [categoryId, practiceWeakWords, difficulty, settings.flashcardCount]);
+  
+  // Keyboard shortcuts
+  useEffect(() => {
+    if (!settings.keyboardShortcuts) return;
+    
+    const handleKeyPress = (e) => {
+      // Don't handle if typing in input
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      if (e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        if (!showResult) {
+          setFlipped(prev => !prev);
+        }
+      }
+      
+      if (flipped && !showResult) {
+        if (e.key === '1' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          handleNext(false);
+        }
+        if (e.key === '2' || e.key === 'ArrowRight' || e.key === 'Enter') {
+          e.preventDefault();
+          handleNext(true);
+        }
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [flipped, showResult, settings.keyboardShortcuts]);
   
   const currentWord = words[currentIndex];
   const isComplete = currentIndex >= words.length;
@@ -58,7 +128,7 @@ function Flashcard({ categoryId, onComplete }) {
   
   // Automatically pronounce when card is flipped to show English side
   useEffect(() => {
-    if (flipped && currentWord && isAvailable()) {
+    if (flipped && currentWord && isAvailable() && settings.autoPronounce) {
       // Small delay to let the flip animation complete
       const timeoutId = setTimeout(() => {
         speak(currentWord.french);
@@ -66,7 +136,7 @@ function Flashcard({ categoryId, onComplete }) {
       
       return () => clearTimeout(timeoutId);
     }
-  }, [flipped, currentWord]);
+  }, [flipped, currentWord, settings.autoPronounce]);
   
   const handleSpeak = (e) => {
     e.stopPropagation(); // Prevent card flip when clicking speaker
@@ -77,13 +147,26 @@ function Flashcard({ categoryId, onComplete }) {
   
   const handleFlip = () => {
     setFlipped(!flipped);
+    if (settings.soundEffects) {
+      playFlipSound();
+    }
   };
   
   const handleNext = (wasCorrect) => {
     if (wasCorrect) {
       setCorrectCount(c => c + 1);
       if (currentWord) {
-        markWordLearned(currentWord.id);
+        markWordCorrect(currentWord.id);
+      }
+      if (settings.soundEffects) {
+        playCorrectSound();
+      }
+    } else {
+      if (currentWord) {
+        markWordIncorrect(currentWord.id);
+      }
+      if (settings.soundEffects) {
+        playIncorrectSound();
       }
     }
     

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import vocabularyData from '../data/vocabulary.json';
-import { markWordLearned, updateCategoryProgress, getProgress } from '../utils/progressStorage';
+import { markWordCorrect, markWordIncorrect, updateCategoryProgress, getProgress, getWordsForReview } from '../utils/progressStorage';
 import { speak, stop, isAvailable } from '../utils/speech';
+import { playMatchSound, playIncorrectSound } from '../utils/sounds';
+import { getSettings } from '../utils/settingsStorage';
 import './Matching.css';
 
-function Matching({ categoryId, onComplete }) {
+function Matching({ categoryId, onComplete, practiceWeakWords = false, difficulty = 'medium' }) {
   const [leftWords, setLeftWords] = useState([]);
   const [rightWords, setRightWords] = useState([]);
   const [selectedLeft, setSelectedLeft] = useState(null);
@@ -16,11 +18,47 @@ function Matching({ categoryId, onComplete }) {
   
   const category = vocabularyData.categories.find(cat => cat.id === categoryId);
   const allWords = category?.words || [];
+  const progress = getProgress();
+  const settings = getSettings();
+  const learnedWords = progress.learnedWords || [];
+  
+  // Filter words based on mode and difficulty
+  const filterWords = (words) => {
+    let filtered = words;
+    
+    // Filter for weak words mode
+    if (practiceWeakWords) {
+      const weakWords = filtered.filter(w => progress.weakWords?.includes(w.id));
+      if (weakWords.length > 0) {
+        filtered = weakWords;
+      }
+    }
+    
+    // Filter by difficulty
+    if (difficulty === 'easy') {
+      filtered = filtered.filter(w => learnedWords.includes(w.id));
+    } else if (difficulty === 'hard') {
+      filtered = filtered.filter(w => !learnedWords.includes(w.id) || progress.weakWords?.includes(w.id));
+    }
+    
+    return filtered;
+  };
   
   useEffect(() => {
+    let filteredWords = filterWords(allWords);
+    
+    // Get words for review if using spaced repetition
+    if (!practiceWeakWords && difficulty === 'medium') {
+      const reviewWords = getWordsForReview(filteredWords);
+      if (reviewWords.length > 0) {
+        const otherWords = filteredWords.filter(w => !reviewWords.some(rw => rw.id === w.id));
+        filteredWords = [...reviewWords, ...otherWords.slice(0, Math.max(0, filteredWords.length - reviewWords.length))];
+      }
+    }
+    
     // Select a random subset of words (12 words for matching game)
-    const subsetSize = Math.min(12, allWords.length);
-    const shuffledAll = [...allWords].sort(() => Math.random() - 0.5);
+    const subsetSize = Math.min(12, filteredWords.length);
+    const shuffledAll = [...filteredWords].sort(() => Math.random() - 0.5);
     const selectedWords = shuffledAll.slice(0, subsetSize);
     
     // Create pairs from the selected subset
@@ -39,7 +77,7 @@ function Matching({ categoryId, onComplete }) {
     
     setLeftWords(french);
     setRightWords(english);
-  }, [categoryId, allWords]);
+  }, [categoryId, allWords, practiceWeakWords, difficulty]);
   
   const totalWordsInGame = leftWords.length;
   
@@ -59,10 +97,14 @@ function Matching({ categoryId, onComplete }) {
         // Correct match
         setMatchedPairs(prev => [...prev, selectedLeft.id]);
         setScore(prev => prev + 1);
-        markWordLearned(selectedLeft.id);
+        markWordCorrect(selectedLeft.id);
+        
+        if (settings.soundEffects) {
+          playMatchSound();
+        }
         
         // Automatically pronounce the French word when match is made
-        if (isAvailable() && selectedLeft.french) {
+        if (isAvailable() && selectedLeft.french && settings.autoPronounce) {
           speak(selectedLeft.french);
         }
         
@@ -80,6 +122,10 @@ function Matching({ categoryId, onComplete }) {
         }, 500);
       } else {
         // Incorrect match
+        markWordIncorrect(selectedLeft.id);
+        if (settings.soundEffects) {
+          playIncorrectSound();
+        }
         setTimeout(() => {
           setSelectedLeft(null);
           setSelectedRight(null);

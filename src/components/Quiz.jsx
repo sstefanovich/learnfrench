@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import vocabularyData from '../data/vocabulary.json';
-import { markWordLearned, updateCategoryProgress, getProgress } from '../utils/progressStorage';
+import { markWordCorrect, markWordIncorrect, updateCategoryProgress, getProgress, getWordsForReview } from '../utils/progressStorage';
 import { speak, stop, isAvailable } from '../utils/speech';
+import { playCorrectSound, playIncorrectSound } from '../utils/sounds';
+import { getSettings } from '../utils/settingsStorage';
 import './Quiz.css';
 
-function Quiz({ categoryId, onComplete }) {
+function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 'medium' }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
@@ -14,10 +16,46 @@ function Quiz({ categoryId, onComplete }) {
   
   const category = vocabularyData.categories.find(cat => cat.id === categoryId);
   const allWords = category?.words || [];
+  const progress = getProgress();
+  const settings = getSettings();
+  const learnedWords = progress.learnedWords || [];
+  
+  // Filter words based on mode and difficulty
+  const filterWords = (words) => {
+    let filtered = words;
+    
+    // Filter for weak words mode
+    if (practiceWeakWords) {
+      const weakWords = filtered.filter(w => progress.weakWords?.includes(w.id));
+      if (weakWords.length > 0) {
+        filtered = weakWords;
+      }
+    }
+    
+    // Filter by difficulty
+    if (difficulty === 'easy') {
+      filtered = filtered.filter(w => learnedWords.includes(w.id));
+    } else if (difficulty === 'hard') {
+      filtered = filtered.filter(w => !learnedWords.includes(w.id) || progress.weakWords?.includes(w.id));
+    }
+    
+    return filtered;
+  };
   
   useEffect(() => {
+    let filteredWords = filterWords(allWords);
+    
+    // Get words for review if using spaced repetition
+    if (!practiceWeakWords && difficulty === 'medium') {
+      const reviewWords = getWordsForReview(filteredWords);
+      if (reviewWords.length > 0) {
+        const otherWords = filteredWords.filter(w => !reviewWords.some(rw => rw.id === w.id));
+        filteredWords = [...reviewWords, ...otherWords.slice(0, Math.max(0, filteredWords.length - reviewWords.length))];
+      }
+    }
+    
     // Create quiz questions
-    const quizQuestions = allWords.map(word => ({
+    const quizQuestions = filteredWords.map(word => ({
       word,
       questionType: Math.random() > 0.5 ? 'french-to-english' : 'english-to-french'
     }));
@@ -29,7 +67,7 @@ function Quiz({ categoryId, onComplete }) {
     if (shuffled.length > 0) {
       generateAnswers(shuffled[0]);
     }
-  }, [categoryId]);
+  }, [categoryId, practiceWeakWords, difficulty]);
   
   const generateAnswers = (question) => {
     const correctWord = question.word;
@@ -74,7 +112,15 @@ function Quiz({ categoryId, onComplete }) {
     
     if (answer.isCorrect) {
       setScore(s => s + 1);
-      markWordLearned(answer.word.id);
+      markWordCorrect(answer.word.id);
+      if (settings.soundEffects) {
+        playCorrectSound();
+      }
+    } else {
+      markWordIncorrect(answer.word.id);
+      if (settings.soundEffects) {
+        playIncorrectSound();
+      }
     }
     
     setTimeout(() => {
@@ -87,6 +133,32 @@ function Quiz({ categoryId, onComplete }) {
       }
     }, 1500);
   };
+  
+  // Keyboard shortcuts
+  useEffect(() => {
+    if (!settings.keyboardShortcuts) return;
+    
+    const handleKeyPress = (e) => {
+      if (showResult || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      if (['1', '2', '3', '4'].includes(e.key) && shuffledAnswers.length > 0) {
+        e.preventDefault();
+        const index = parseInt(e.key) - 1;
+        if (index < shuffledAnswers.length) {
+          handleAnswerSelect(shuffledAnswers[index]);
+        }
+      }
+      
+      if (e.key === 'Enter' && shuffledAnswers.length > 0) {
+        e.preventDefault();
+        // Select first answer or random
+        handleAnswerSelect(shuffledAnswers[0]);
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [showResult, shuffledAnswers, settings.keyboardShortcuts]);
   
   if (isComplete || !currentQuestion) {
     return null;
