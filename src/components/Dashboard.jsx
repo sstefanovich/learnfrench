@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import vocabularyData from '../data/vocabulary.json';
 import { getProgress, saveProgress, resetProgress } from '../utils/progressStorage';
 import { getSettings, updatePronunciationSpeed, updateSetting, toggleDarkMode, applyDarkMode, saveSettings } from '../utils/settingsStorage';
 import { speak, isAvailable } from '../utils/speech';
-import { checkAchievements } from '../utils/achievements';
+import { checkAchievements, unlockAchievements } from '../utils/achievements';
 import Stats from './Stats';
 import './Dashboard.css';
 
@@ -21,22 +21,65 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
   const [gameDifficulty, setGameDifficulty] = useState('medium');
   const [showAchievements, setShowAchievements] = useState(false);
   const [unlockedAchievements, setUnlockedAchievements] = useState([]);
+  const achievementCheckRef = useRef(false);
+  const lastProgressRef = useRef(null);
   
   useEffect(() => {
     const currentSettings = getSettings();
     setPronunciationSpeed(currentSettings.pronunciationSpeed || 0.8);
     setSettings(currentSettings);
     applyDarkMode(currentSettings.darkMode);
-    
-    // Check for new achievements (only if not already showing achievements)
-    if (!showAchievements) {
-      const newAchievements = checkAchievements(progress, vocabularyData.categories);
-      if (newAchievements.length > 0) {
-        setUnlockedAchievements(newAchievements);
-        setShowAchievements(true);
-      }
+  }, []);
+  
+  // Check for achievements separately to avoid infinite loops
+  useEffect(() => {
+    // Only check if not already showing achievements and progress has actually changed
+    if (showAchievements || achievementCheckRef.current) {
+      return;
     }
+    
+    // Create a stable reference to compare
+    const progressKey = JSON.stringify({
+      learnedWords: progress.learnedWords.length,
+      streak: progress.streak,
+      totalScore: progress.totalScore,
+      totalSessions: progress.stats?.totalSessions || 0
+    });
+    
+    // Only check if progress actually changed
+    if (lastProgressRef.current === progressKey) {
+      return;
+    }
+    
+    lastProgressRef.current = progressKey;
+    achievementCheckRef.current = true;
+    
+    // Use setTimeout to defer achievement check and avoid blocking
+    setTimeout(() => {
+      try {
+        const newAchievements = checkAchievements(progress, vocabularyData.categories);
+        if (newAchievements.length > 0) {
+          // Unlock achievements and save progress
+          const updatedProgress = unlockAchievements(progress, newAchievements);
+          saveProgress(updatedProgress);
+          
+          setUnlockedAchievements(newAchievements);
+          setShowAchievements(true);
+        }
+      } catch (error) {
+        console.error('Error checking achievements:', error);
+      } finally {
+        achievementCheckRef.current = false;
+      }
+    }, 100);
   }, [progress, showAchievements]);
+  
+  // Reset achievement check flag when popup is closed
+  useEffect(() => {
+    if (!showAchievements) {
+      achievementCheckRef.current = false;
+    }
+  }, [showAchievements]);
   
   // Add keyboard handler to close achievement popup with Escape key
   useEffect(() => {

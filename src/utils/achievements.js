@@ -96,18 +96,44 @@ export const checkAchievements = (progress, allCategories = []) => {
   const unlocked = [];
   
   Object.values(ACHIEVEMENTS).forEach(achievement => {
-    if (!progress.achievementsUnlocked[achievement.id]) {
+    if (!progress.achievementsUnlocked?.[achievement.id]) {
       if (achievement.condition(progress, allCategories)) {
-        progress.achievementsUnlocked[achievement.id] = new Date().toISOString();
-        progress.achievements.push({
-          id: achievement.id,
-          unlockedAt: progress.achievementsUnlocked[achievement.id],
-          ...achievement
-        });
         unlocked.push(achievement);
       }
     }
   });
   
   return unlocked;
+};
+
+export const unlockAchievements = (progress, unlockedAchievements) => {
+  if (!unlockedAchievements || unlockedAchievements.length === 0) {
+    return progress;
+  }
+  
+  // Create a copy of progress to avoid mutation
+  const updatedProgress = { ...progress };
+  
+  // Initialize if needed
+  if (!updatedProgress.achievementsUnlocked) {
+    updatedProgress.achievementsUnlocked = {};
+  }
+  if (!updatedProgress.achievements) {
+    updatedProgress.achievements = [];
+  }
+  
+  // Unlock achievements
+  unlockedAchievements.forEach(achievement => {
+    if (!updatedProgress.achievementsUnlocked[achievement.id]) {
+      const unlockedAt = new Date().toISOString();
+      updatedProgress.achievementsUnlocked[achievement.id] = unlockedAt;
+      updatedProgress.achievements.push({
+        id: achievement.id,
+        unlockedAt: unlockedAt,
+        ...achievement
+      });
+    }
+  });
+  
+  return updatedProgress;
 };
