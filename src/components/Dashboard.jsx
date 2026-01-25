@@ -28,13 +28,28 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
     setSettings(currentSettings);
     applyDarkMode(currentSettings.darkMode);
     
-    // Check for new achievements
-    const newAchievements = checkAchievements(progress, vocabularyData.categories);
-    if (newAchievements.length > 0) {
-      setUnlockedAchievements(newAchievements);
-      setShowAchievements(true);
+    // Check for new achievements (only if not already showing achievements)
+    if (!showAchievements) {
+      const newAchievements = checkAchievements(progress, vocabularyData.categories);
+      if (newAchievements.length > 0) {
+        setUnlockedAchievements(newAchievements);
+        setShowAchievements(true);
+      }
     }
-  }, [progress]);
+  }, [progress, showAchievements]);
+  
+  // Add keyboard handler to close achievement popup with Escape key
+  useEffect(() => {
+    if (showAchievements) {
+      const handleEscape = (e) => {
+        if (e.key === 'Escape') {
+          setShowAchievements(false);
+        }
+      };
+      window.addEventListener('keydown', handleEscape);
+      return () => window.removeEventListener('keydown', handleEscape);
+    }
+  }, [showAchievements]);
   
   const handleCategorySelect = (categoryId) => {
     setSelectedCategory(categoryId);
@@ -399,12 +414,31 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
         </div>
       )}
       
-      {!showStats && (
-        <>
-          {showAchievements && unlockedAchievements.length > 0 && (
-        <div className="achievement-popup">
-          <div className="achievement-content">
-            <h3>🏆 Achievement Unlocked!</h3>
+      {showAchievements && unlockedAchievements.length > 0 && (
+        <div 
+          className="achievement-popup"
+          onClick={(e) => {
+            // Close when clicking the backdrop (outside the content)
+            if (e.target === e.currentTarget) {
+              setShowAchievements(false);
+            }
+          }}
+        >
+          <div 
+            className="achievement-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="achievement-header">
+              <h3>🏆 Achievement Unlocked!</h3>
+              <button
+                className="achievement-close-button"
+                onClick={() => setShowAchievements(false)}
+                aria-label="Close achievement popup"
+                title="Close"
+              >
+                ✕
+              </button>
+            </div>
             {unlockedAchievements.map(achievement => (
               <div key={achievement.id} className="achievement-item">
                 <span className="achievement-icon">{achievement.icon}</span>
@@ -414,10 +448,21 @@ function Dashboard({ onSelectCategory, onSelectGameMode }) {
                 </div>
               </div>
             ))}
-            <button onClick={() => setShowAchievements(false)}>Got it!</button>
+            <button 
+              className="achievement-ok-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowAchievements(false);
+              }}
+            >
+              Got it!
+            </button>
           </div>
         </div>
       )}
+      
+      {!showStats && (
+        <>
       
       <div className="dashboard-stats">
         <div className="stat-card">
