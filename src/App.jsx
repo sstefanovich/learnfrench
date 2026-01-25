@@ -15,16 +15,19 @@ function App() {
   const [selectedGameMode, setSelectedGameMode] = useState(null);
   const [gameResults, setGameResults] = useState(null);
   const [gameOptions, setGameOptions] = useState({});
+  const [gameKey, setGameKey] = useState(0); // Key to force remount of game components
   
   const handleCategorySelect = (categoryId, options = {}) => {
     setSelectedCategory(categoryId);
     setGameOptions(options);
+    setGameKey(prev => prev + 1); // Increment key to force fresh component
     setCurrentView('game');
   };
   
   const handleGameModeSelect = (mode, options = {}) => {
     setSelectedGameMode(mode);
     setGameOptions(options);
+    setGameKey(prev => prev + 1); // Increment key to force fresh component
     setCurrentView('game');
   };
   
@@ -41,6 +44,7 @@ function App() {
   
   const handleRestart = () => {
     setGameResults(null);
+    setGameKey(prev => prev + 1); // Increment key to force fresh component
     setCurrentView('game');
   };
   
@@ -49,6 +53,7 @@ function App() {
     setSelectedCategory(null);
     setSelectedGameMode(null);
     setGameResults(null);
+    setGameKey(prev => prev + 1); // Increment key to ensure fresh component on next game
   };
   
   const renderGame = () => {
@@ -65,15 +70,15 @@ function App() {
     
     switch (selectedGameMode) {
       case 'flashcard':
-        return <Flashcard {...commonProps} />;
+        return <Flashcard key={gameKey} {...commonProps} />;
       case 'quiz':
-        return <Quiz {...commonProps} />;
+        return <Quiz key={gameKey} {...commonProps} />;
       case 'matching':
-        return <Matching {...commonProps} />;
+        return <Matching key={gameKey} {...commonProps} />;
       case 'typing':
-        return <Typing {...commonProps} />;
+        return <Typing key={gameKey} {...commonProps} />;
       case 'pronunciation':
-        return <Pronunciation {...commonProps} />;
+        return <Pronunciation key={gameKey} {...commonProps} />;
       default:
         return null;
     }

@@ -44,6 +44,12 @@ function Flashcard({ categoryId, onComplete, practiceWeakWords = false, difficul
   
   // Initialize random selection of words when component mounts or category changes
   useEffect(() => {
+    // Reset all state first
+    setCurrentIndex(0);
+    setCorrectCount(0);
+    setFlipped(false);
+    setShowResult(false);
+    
     if (category?.words) {
       let allWords = category.words;
       
@@ -64,7 +70,7 @@ function Flashcard({ categoryId, onComplete, practiceWeakWords = false, difficul
         if (reviewWords.length > 0) {
           // Mix review words with other words
           const otherWords = allWords.filter(w => !reviewWords.some(rw => rw.id === w.id));
-          allWords = [...reviewWords, ...shuffledArray(otherWords).slice(0, Math.max(0, allWords.length - reviewWords.length))];
+          allWords = [...reviewWords, ...shuffleArray(otherWords).slice(0, Math.max(0, allWords.length - reviewWords.length))];
         }
       }
       
@@ -77,12 +83,11 @@ function Flashcard({ categoryId, onComplete, practiceWeakWords = false, difficul
       const selectedWords = shuffled.slice(0, selectedCount);
       
       setWords(selectedWords);
-      setCurrentIndex(0);
-      setCorrectCount(0);
-      setFlipped(false);
-      setShowResult(false);
+    } else {
+      // If no category or words, set empty array
+      setWords([]);
     }
-  }, [categoryId, practiceWeakWords, difficulty, settings.flashcardCount]);
+  }, [categoryId, practiceWeakWords, difficulty, settings.flashcardCount, category]);
   
   // Keyboard shortcuts
   useEffect(() => {
@@ -181,12 +186,31 @@ function Flashcard({ categoryId, onComplete, practiceWeakWords = false, difficul
     }, 1500);
   };
   
+  // If no words available, show message
+  if (words.length === 0) {
+    return (
+      <div className="flashcard-container">
+        <div style={{ textAlign: 'center', padding: '2rem' }}>
+          <h3>No words available</h3>
+          <p>Try adjusting your difficulty settings or select a different category.</p>
+        </div>
+      </div>
+    );
+  }
+  
+  // If completed, show completion message briefly before calling onComplete
   if (isComplete) {
     return null;
   }
   
   if (!currentWord) {
-    return <div>No words available</div>;
+    return (
+      <div className="flashcard-container">
+        <div style={{ textAlign: 'center', padding: '2rem' }}>
+          <h3>Loading...</h3>
+        </div>
+      </div>
+    );
   }
   
   const isLearned = learnedWords.includes(currentWord.id);
