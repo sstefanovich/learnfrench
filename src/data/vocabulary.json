@@ -352,6 +352,356 @@
           "english": "Good luck / Hang in there",
           "pronunciation": "bon koo-RAZH",
           "example": "Bon courage!"
+        },
+        {
+          "id": "g51",
+          "french": "À la prochaine",
+          "english": "Until next time",
+          "pronunciation": "a la pro-SHEN",
+          "example": "À la prochaine!"
+        },
+        {
+          "id": "g52",
+          "french": "À plus",
+          "english": "See you later (informal)",
+          "pronunciation": "a PLOO",
+          "example": "À plus!"
+        },
+        {
+          "id": "g53",
+          "french": "Ciao",
+          "english": "Bye (informal, borrowed from Italian)",
+          "pronunciation": "CHOW",
+          "example": "Ciao!"
+        },
+        {
+          "id": "g54",
+          "french": "Bonne chance",
+          "english": "Good luck",
+          "pronunciation": "bon SHONS",
+          "example": "Bonne chance pour ton examen!"
+        },
+        {
+          "id": "g55",
+          "french": "Félicitations",
+          "english": "Congratulations",
+          "pronunciation": "fay-lee-see-ta-SYON",
+          "example": "Félicitations pour votre réussite!"
+        },
+        {
+          "id": "g56",
+          "french": "Bien fait",
+          "english": "Well done",
+          "pronunciation": "byan FET",
+          "example": "Bien fait!"
+        },
+        {
+          "id": "g57",
+          "french": "Bravo",
+          "english": "Bravo / Well done",
+          "pronunciation": "bra-VOH",
+          "example": "Bravo pour votre performance!"
+        },
+        {
+          "id": "g58",
+          "french": "À votre service",
+          "english": "At your service",
+          "pronunciation": "a vo-truh ser-VEES",
+          "example": "Je suis à votre service."
+        },
+        {
+          "id": "g59",
+          "french": "Je vous en prie",
+          "english": "You're welcome (formal)",
+          "pronunciation": "zhuh voo zon PREE",
+          "example": "Merci beaucoup! - Je vous en prie!"
+        },
+        {
+          "id": "g60",
+          "french": "Il n'y a pas de quoi",
+          "english": "Don't mention it",
+          "pronunciation": "eel nee a pa duh KWA",
+          "example": "Merci! - Il n'y a pas de quoi!"
+        },
+        {
+          "id": "g61",
+          "french": "Avec plaisir",
+          "english": "With pleasure",
+          "pronunciation": "a-vek play-ZEER",
+          "example": "Avec plaisir!"
+        },
+        {
+          "id": "g62",
+          "french": "Comment vous portez-vous?",
+          "english": "How are you doing? (formal)",
+          "pronunciation": "ko-MON voo por-tay VOO",
+          "example": "Comment vous portez-vous?"
+        },
+        {
+          "id": "g63",
+          "french": "Ça va bien",
+          "english": "I'm fine / It's going well",
+          "pronunciation": "sa va BYAN",
+          "example": "Comment ça va? - Ça va bien!"
+        },
+        {
+          "id": "g64",
+          "french": "Ça va mal",
+          "english": "It's going badly",
+          "pronunciation": "sa va MAL",
+          "example": "Ça va mal aujourd'hui."
+        },
+        {
+          "id": "g65",
+          "french": "Comme ci, comme ça",
+          "english": "So-so",
+          "pronunciation": "kom SEE, kom SA",
+          "example": "Comment ça va? - Comme ci, comme ça."
+        },
+        {
+          "id": "g66",
+          "french": "Très bien",
+          "english": "Very well",
+          "pronunciation": "tray BYAN",
+          "example": "Comment allez-vous? - Très bien, merci!"
+        },
+        {
+          "id": "g67",
+          "french": "Pas mal",
+          "english": "Not bad",
+          "pronunciation": "pa MAL",
+          "example": "Comment ça va? - Pas mal!"
+        },
+        {
+          "id": "g68",
+          "french": "Super",
+          "english": "Great / Super",
+          "pronunciation": "soo-PEHR",
+          "example": "Comment ça va? - Super!"
+        },
+        {
+          "id": "g69",
+          "french": "Génial",
+          "english": "Awesome / Great",
+          "pronunciation": "zhay-NYAL",
+          "example": "C'est génial!"
+        },
+        {
+          "id": "g70",
+          "french": "Formidable",
+          "english": "Wonderful / Terrific",
+          "pronunciation": "for-mee-DA-bluh",
+          "example": "C'est formidable!"
+        },
+        {
+          "id": "g71",
+          "french": "À tout de suite",
+          "english": "See you in a moment",
+          "pronunciation": "a too duh SWEET",
+          "example": "À tout de suite!"
+        },
+        {
+          "id": "g72",
+          "french": "À très bientôt",
+          "english": "See you very soon",
+          "pronunciation": "a tray byan-TOH",
+          "example": "À très bientôt!"
+        },
+        {
+          "id": "g73",
+          "french": "Bonne continuation",
+          "english": "Keep it up / All the best",
+          "pronunciation": "bon kon-tee-noo-a-SYON",
+          "example": "Bonne continuation!"
+        },
+        {
+          "id": "g74",
+          "french": "Prenez soin de vous",
+          "english": "Take care of yourself",
+          "pronunciation": "pruh-NAY swan duh VOO",
+          "example": "Prenez soin de vous!"
+        },
+        {
+          "id": "g75",
+          "french": "Portez-vous bien",
+          "english": "Take care / Stay well",
+          "pronunciation": "por-tay voo BYAN",
+          "example": "Portez-vous bien!"
+        },
+        {
+          "id": "g76",
+          "french": "À la vôtre",
+          "english": "Cheers / To yours",
+          "pronunciation": "a la VOT-ruh",
+          "example": "À la vôtre!"
+        },
+        {
+          "id": "g77",
+          "french": "Santé",
+          "english": "Cheers / Health",
+          "pronunciation": "san-TAY",
+          "example": "Santé!"
+        },
+        {
+          "id": "g78",
+          "french": "Tchin-tchin",
+          "english": "Cheers (toast)",
+          "pronunciation": "chin-CHIN",
+          "example": "Tchin-tchin!"
+        },
+        {
+          "id": "g79",
+          "french": "Bonne fête",
+          "english": "Happy holiday / Happy celebration",
+          "pronunciation": "bon FET",
+          "example": "Bonne fête!"
+        },
+        {
+          "id": "g80",
+          "french": "Joyeuses fêtes",
+          "english": "Happy holidays",
+          "pronunciation": "zhwa-YUHZ FET",
+          "example": "Joyeuses fêtes!"
+        },
+        {
+          "id": "g81",
+          "french": "Bonne année",
+          "english": "Happy New Year",
+          "pronunciation": "bon a-NAY",
+          "example": "Bonne année!"
+        },
+        {
+          "id": "g82",
+          "french": "Meilleurs vœux",
+          "english": "Best wishes",
+          "pronunciation": "may-YUHR vuh",
+          "example": "Meilleurs vœux pour la nouvelle année!"
+        },
+        {
+          "id": "g83",
+          "french": "Bonne santé",
+          "english": "Good health",
+          "pronunciation": "bon san-TAY",
+          "example": "Je vous souhaite une bonne santé."
+        },
+        {
+          "id": "g84",
+          "french": "Tous mes vœux",
+          "english": "All my best wishes",
+          "pronunciation": "too may vuh",
+          "example": "Tous mes vœux!"
+        },
+        {
+          "id": "g85",
+          "french": "À votre santé",
+          "english": "To your health",
+          "pronunciation": "a vo-truh san-TAY",
+          "example": "À votre santé!"
+        },
+        {
+          "id": "g86",
+          "french": "Excusez-moi pour le dérangement",
+          "english": "Sorry for the disturbance",
+          "pronunciation": "ex-koo-zay MWAH poor luh day-ron-ZHON",
+          "example": "Excusez-moi pour le dérangement."
+        },
+        {
+          "id": "g87",
+          "french": "Je vous prie de m'excuser",
+          "english": "I beg your pardon",
+          "pronunciation": "zhuh voo PREE duh meks-koo-ZAY",
+          "example": "Je vous prie de m'excuser."
+        },
+        {
+          "id": "g88",
+          "french": "Ce n'est rien",
+          "english": "It's nothing / Don't worry about it",
+          "pronunciation": "suh nay RYAN",
+          "example": "Ce n'est rien!"
+        },
+        {
+          "id": "g89",
+          "french": "Pas de souci",
+          "english": "No worries",
+          "pronunciation": "pa duh soo-SEE",
+          "example": "Pas de souci!"
+        },
+        {
+          "id": "g90",
+          "french": "Aucun problème",
+          "english": "No problem",
+          "pronunciation": "oh-KUN pro-BLEM",
+          "example": "Aucun problème!"
+        },
+        {
+          "id": "g91",
+          "french": "Je vous remercie",
+          "english": "I thank you (formal)",
+          "pronunciation": "zhuh voo ruh-mer-SEE",
+          "example": "Je vous remercie beaucoup."
+        },
+        {
+          "id": "g92",
+          "french": "Je te remercie",
+          "english": "I thank you (informal)",
+          "pronunciation": "zhuh tuh ruh-mer-SEE",
+          "example": "Je te remercie!"
+        },
+        {
+          "id": "g93",
+          "french": "Merci infiniment",
+          "english": "Thank you infinitely / Thank you so much",
+          "pronunciation": "mer-SEE an-fee-nee-MON",
+          "example": "Merci infiniment!"
+        },
+        {
+          "id": "g94",
+          "french": "Je vous suis reconnaissant",
+          "english": "I am grateful to you",
+          "pronunciation": "zhuh voo swee ruh-kon-ay-SON",
+          "example": "Je vous suis reconnaissant."
+        },
+        {
+          "id": "g95",
+          "french": "C'est très gentil",
+          "english": "That's very kind",
+          "pronunciation": "say tray zhon-TEE",
+          "example": "C'est très gentil de votre part."
+        },
+        {
+          "id": "g96",
+          "french": "Vous êtes très aimable",
+          "english": "You are very kind",
+          "pronunciation": "voo zet tray zay-MA-bluh",
+          "example": "Vous êtes très aimable."
+        },
+        {
+          "id": "g97",
+          "french": "C'est un plaisir",
+          "english": "It's a pleasure",
+          "pronunciation": "say tun play-ZEER",
+          "example": "C'est un plaisir de vous aider."
+        },
+        {
+          "id": "g98",
+          "french": "Tout le plaisir est pour moi",
+          "english": "The pleasure is all mine",
+          "pronunciation": "too luh play-ZEER ay poor MWAH",
+          "example": "Tout le plaisir est pour moi."
+        },
+        {
+          "id": "g99",
+          "french": "Ravi de vous connaître",
+          "english": "Pleased to meet you",
+          "pronunciation": "ra-VEE duh voo kon-NET-ruh",
+          "example": "Ravi de vous connaître!"
+        },
+        {
+          "id": "g100",
+          "french": "C'est un honneur",
+          "english": "It's an honor",
+          "pronunciation": "say tun o-NUHR",
+          "example": "C'est un honneur de vous rencontrer."
         }
       ]
     },
@@ -675,6 +1025,356 @@
           "english": "about ten",
           "pronunciation": "dee-ZEN",
           "example": "Une dizaine de personnes."
+        },
+        {
+          "id": "n51",
+          "french": "vingt-et-un",
+          "english": "twenty-one",
+          "pronunciation": "van-tay-UHN",
+          "example": "J'ai vingt-et-un ans."
+        },
+        {
+          "id": "n52",
+          "french": "vingt-deux",
+          "english": "twenty-two",
+          "pronunciation": "van-DUH",
+          "example": "Vingt-deux personnes."
+        },
+        {
+          "id": "n53",
+          "french": "trente-et-un",
+          "english": "thirty-one",
+          "pronunciation": "tron-tay-UHN",
+          "example": "Trente-et-un jours."
+        },
+        {
+          "id": "n54",
+          "french": "quarante-et-un",
+          "english": "forty-one",
+          "pronunciation": "ka-ron-tay-UHN",
+          "example": "Quarante-et-un euros."
+        },
+        {
+          "id": "n55",
+          "french": "cinquante-et-un",
+          "english": "fifty-one",
+          "pronunciation": "san-kon-tay-UHN",
+          "example": "Cinquante-et-un ans."
+        },
+        {
+          "id": "n56",
+          "french": "soixante-et-onze",
+          "english": "seventy-one",
+          "pronunciation": "swa-son-tay-ONZ",
+          "example": "Soixante-et-onze pages."
+        },
+        {
+          "id": "n57",
+          "french": "quatre-vingt-un",
+          "english": "eighty-one",
+          "pronunciation": "kat-ruh-van-UHN",
+          "example": "Quatre-vingt-un jours."
+        },
+        {
+          "id": "n58",
+          "french": "quatre-vingt-onze",
+          "english": "ninety-one",
+          "pronunciation": "kat-ruh-van-ONZ",
+          "example": "Quatre-vingt-onze pour cent."
+        },
+        {
+          "id": "n59",
+          "french": "cent un",
+          "english": "one hundred one",
+          "pronunciation": "son UHN",
+          "example": "Cent un euros."
+        },
+        {
+          "id": "n60",
+          "french": "deux cents",
+          "english": "two hundred",
+          "pronunciation": "duh SON",
+          "example": "Deux cents personnes."
+        },
+        {
+          "id": "n61",
+          "french": "trois cents",
+          "english": "three hundred",
+          "pronunciation": "trwa SON",
+          "example": "Trois cents euros."
+        },
+        {
+          "id": "n62",
+          "french": "cinq cents",
+          "english": "five hundred",
+          "pronunciation": "sank SON",
+          "example": "Cinq cents kilomètres."
+        },
+        {
+          "id": "n63",
+          "french": "mille un",
+          "english": "one thousand one",
+          "pronunciation": "MEEL UHN",
+          "example": "Mille un jours."
+        },
+        {
+          "id": "n64",
+          "french": "deux mille",
+          "english": "two thousand",
+          "pronunciation": "duh MEEL",
+          "example": "Deux mille euros."
+        },
+        {
+          "id": "n65",
+          "french": "dix mille",
+          "english": "ten thousand",
+          "pronunciation": "dees MEEL",
+          "example": "Dix mille personnes."
+        },
+        {
+          "id": "n66",
+          "french": "million",
+          "english": "million",
+          "pronunciation": "mee-LYON",
+          "example": "Un million d'euros."
+        },
+        {
+          "id": "n67",
+          "french": "milliard",
+          "english": "billion",
+          "pronunciation": "mee-LYAR",
+          "example": "Un milliard de dollars."
+        },
+        {
+          "id": "n68",
+          "french": "zéro point cinq",
+          "english": "zero point five",
+          "pronunciation": "zay-ROH pwan SANK",
+          "example": "Zéro point cinq pour cent."
+        },
+        {
+          "id": "n69",
+          "french": "un demi",
+          "english": "one half",
+          "pronunciation": "uhn duh-MEE",
+          "example": "Un demi-litre."
+        },
+        {
+          "id": "n70",
+          "french": "un quart",
+          "english": "one quarter",
+          "pronunciation": "uhn KAR",
+          "example": "Un quart d'heure."
+        },
+        {
+          "id": "n71",
+          "french": "trois quarts",
+          "english": "three quarters",
+          "pronunciation": "trwa KAR",
+          "example": "Trois quarts d'heure."
+        },
+        {
+          "id": "n72",
+          "french": "une fois",
+          "english": "once",
+          "pronunciation": "oon FWA",
+          "example": "Une fois par jour."
+        },
+        {
+          "id": "n73",
+          "french": "deux fois",
+          "english": "twice",
+          "pronunciation": "duh FWA",
+          "example": "Deux fois par semaine."
+        },
+        {
+          "id": "n74",
+          "french": "trois fois",
+          "english": "three times",
+          "pronunciation": "trwa FWA",
+          "example": "Trois fois par jour."
+        },
+        {
+          "id": "n75",
+          "french": "premièrement",
+          "english": "firstly",
+          "pronunciation": "pruh-myehr-MON",
+          "example": "Premièrement, je dois partir."
+        },
+        {
+          "id": "n76",
+          "french": "deuxièmement",
+          "english": "secondly",
+          "pronunciation": "duh-zyem-MON",
+          "example": "Deuxièmement, il faut réserver."
+        },
+        {
+          "id": "n77",
+          "french": "troisièmement",
+          "english": "thirdly",
+          "pronunciation": "trwa-zyem-MON",
+          "example": "Troisièmement, préparer les bagages."
+        },
+        {
+          "id": "n78",
+          "french": "dizaine",
+          "english": "about ten / dozen",
+          "pronunciation": "dee-ZEN",
+          "example": "Une dizaine de minutes."
+        },
+        {
+          "id": "n79",
+          "french": "quinzaine",
+          "english": "about fifteen",
+          "pronunciation": "kan-ZEN",
+          "example": "Une quinzaine de jours."
+        },
+        {
+          "id": "n80",
+          "french": "vingtaine",
+          "english": "about twenty",
+          "pronunciation": "van-TEN",
+          "example": "Une vingtaine de personnes."
+        },
+        {
+          "id": "n81",
+          "french": "trentaine",
+          "english": "about thirty",
+          "pronunciation": "tron-TEN",
+          "example": "Une trentaine d'années."
+        },
+        {
+          "id": "n82",
+          "french": "cinquantaine",
+          "english": "about fifty",
+          "pronunciation": "san-kon-TEN",
+          "example": "Une cinquantaine d'euros."
+        },
+        {
+          "id": "n83",
+          "french": "centaine",
+          "english": "about a hundred",
+          "pronunciation": "son-TEN",
+          "example": "Une centaine de personnes."
+        },
+        {
+          "id": "n84",
+          "french": "numéro",
+          "english": "number",
+          "pronunciation": "noo-may-ROH",
+          "example": "Quel est votre numéro de téléphone?"
+        },
+        {
+          "id": "n85",
+          "french": "chiffre",
+          "english": "digit / figure",
+          "pronunciation": "SHEE-fruh",
+          "example": "Un chiffre important."
+        },
+        {
+          "id": "n86",
+          "french": "nombre",
+          "english": "number / amount",
+          "pronunciation": "NOM-bruh",
+          "example": "Le nombre de participants."
+        },
+        {
+          "id": "n87",
+          "french": "quantité",
+          "english": "quantity",
+          "pronunciation": "kon-tee-TAY",
+          "example": "Quelle quantité?"
+        },
+        {
+          "id": "n88",
+          "french": "total",
+          "english": "total",
+          "pronunciation": "to-TAL",
+          "example": "Le total est de cent euros."
+        },
+        {
+          "id": "n89",
+          "french": "somme",
+          "english": "sum / amount",
+          "pronunciation": "SOM",
+          "example": "La somme totale."
+        },
+        {
+          "id": "n90",
+          "french": "montant",
+          "english": "amount",
+          "pronunciation": "mon-TON",
+          "example": "Quel est le montant?"
+        },
+        {
+          "id": "n91",
+          "french": "paire",
+          "english": "pair",
+          "pronunciation": "PEHR",
+          "example": "Une paire de chaussures."
+        },
+        {
+          "id": "n92",
+          "french": "couple",
+          "english": "couple / pair",
+          "pronunciation": "KOO-pluh",
+          "example": "Un couple de jours."
+        },
+        {
+          "id": "n93",
+          "french": "score",
+          "english": "score",
+          "pronunciation": "SKOR",
+          "example": "Quel est le score?"
+        },
+        {
+          "id": "n94",
+          "french": "pourcentage",
+          "english": "percentage",
+          "pronunciation": "poor-son-TAZH",
+          "example": "Quel pourcentage?"
+        },
+        {
+          "id": "n95",
+          "french": "fraction",
+          "english": "fraction",
+          "pronunciation": "frak-SYON",
+          "example": "Une fraction du total."
+        },
+        {
+          "id": "n96",
+          "french": "multiple",
+          "english": "multiple",
+          "pronunciation": "mool-TEE-pluh",
+          "example": "Un multiple de dix."
+        },
+        {
+          "id": "n97",
+          "french": "paquet",
+          "english": "pack / package",
+          "pronunciation": "pa-KAY",
+          "example": "Un paquet de dix."
+        },
+        {
+          "id": "n98",
+          "french": "lot",
+          "english": "batch / lot",
+          "pronunciation": "LOH",
+          "example": "Un lot de produits."
+        },
+        {
+          "id": "n99",
+          "french": "série",
+          "english": "series / set",
+          "pronunciation": "say-REE",
+          "example": "Une série de numéros."
+        },
+        {
+          "id": "n100",
+          "french": "groupe",
+          "english": "group",
+          "pronunciation": "GROOP",
+          "example": "Un groupe de personnes."
         }
       ]
     },
@@ -1030,6 +1730,356 @@
           "english": "journey / trip",
           "pronunciation": "tra-ZHAY",
           "example": "Combien de temps pour ce trajet?"
+        },
+        {
+          "id": "t51",
+          "french": "voyage",
+          "english": "trip / journey",
+          "pronunciation": "vwa-YAZH",
+          "example": "Bon voyage!"
+        },
+        {
+          "id": "t52",
+          "french": "déplacement",
+          "english": "travel / movement",
+          "pronunciation": "day-plas-MON",
+          "example": "Les moyens de déplacement."
+        },
+        {
+          "id": "t53",
+          "french": "itinéraire",
+          "english": "itinerary / route",
+          "pronunciation": "ee-tee-nay-REHR",
+          "example": "Quel est l'itinéraire?"
+        },
+        {
+          "id": "t54",
+          "french": "destination",
+          "english": "destination",
+          "pronunciation": "des-tee-na-SYON",
+          "example": "Quelle est votre destination?"
+        },
+        {
+          "id": "t55",
+          "french": "départ",
+          "english": "departure",
+          "pronunciation": "day-PAR",
+          "example": "L'heure de départ."
+        },
+        {
+          "id": "t56",
+          "french": "arrivée",
+          "english": "arrival",
+          "pronunciation": "a-ree-VAY",
+          "example": "L'heure d'arrivée."
+        },
+        {
+          "id": "t57",
+          "french": "retard",
+          "english": "delay",
+          "pronunciation": "ruh-TAR",
+          "example": "Le train a du retard."
+        },
+        {
+          "id": "t58",
+          "french": "ponctuel",
+          "english": "on time",
+          "pronunciation": "ponk-too-EL",
+          "example": "Le train est ponctuel."
+        },
+        {
+          "id": "t59",
+          "french": "annulé",
+          "english": "cancelled",
+          "pronunciation": "a-noo-LAY",
+          "example": "Le vol est annulé."
+        },
+        {
+          "id": "t60",
+          "french": "compartiment",
+          "english": "compartment",
+          "pronunciation": "kom-par-tee-MON",
+          "example": "Un compartiment pour fumeurs."
+        },
+        {
+          "id": "t61",
+          "french": "wagon",
+          "english": "carriage / car",
+          "pronunciation": "va-GON",
+          "example": "Dans quel wagon?"
+        },
+        {
+          "id": "t62",
+          "french": "voie",
+          "english": "track / platform",
+          "pronunciation": "VWA",
+          "example": "Quelle voie pour Paris?"
+        },
+        {
+          "id": "t63",
+          "french": "correspondance",
+          "english": "connection",
+          "pronunciation": "ko-res-pon-DONS",
+          "example": "Y a-t-il une correspondance?"
+        },
+        {
+          "id": "t64",
+          "french": "changement",
+          "english": "change / transfer",
+          "pronunciation": "shonzh-MON",
+          "example": "Changement de train."
+        },
+        {
+          "id": "t65",
+          "french": "direct",
+          "english": "direct",
+          "pronunciation": "dee-REKT",
+          "example": "Un train direct."
+        },
+        {
+          "id": "t66",
+          "french": "escale",
+          "english": "stopover",
+          "pronunciation": "es-KAL",
+          "example": "Un vol avec escale."
+        },
+        {
+          "id": "t67",
+          "french": "décollage",
+          "english": "takeoff",
+          "pronunciation": "day-ko-LAZH",
+          "example": "L'heure de décollage."
+        },
+        {
+          "id": "t68",
+          "french": "atterrissage",
+          "english": "landing",
+          "pronunciation": "a-teh-ree-SAZH",
+          "example": "L'atterrissage est prévu à 15h."
+        },
+        {
+          "id": "t69",
+          "french": "hôtesse de l'air",
+          "english": "flight attendant",
+          "pronunciation": "oh-TES duh LEHR",
+          "example": "L'hôtesse de l'air est très serviable."
+        },
+        {
+          "id": "t70",
+          "french": "steward",
+          "english": "steward / flight attendant",
+          "pronunciation": "stoo-ARD",
+          "example": "Le steward vous aidera."
+        },
+        {
+          "id": "t71",
+          "french": "pilote",
+          "english": "pilot",
+          "pronunciation": "pee-LOT",
+          "example": "Le pilote annonce le décollage."
+        },
+        {
+          "id": "t72",
+          "french": "ceinture de sécurité",
+          "english": "seatbelt",
+          "pronunciation": "san-TOOR duh say-koo-ree-TAY",
+          "example": "Attachez votre ceinture de sécurité."
+        },
+        {
+          "id": "t73",
+          "french": "tablette",
+          "english": "tray table",
+          "pronunciation": "ta-BLET",
+          "example": "Baissez votre tablette."
+        },
+        {
+          "id": "t74",
+          "french": "hublot",
+          "english": "window (airplane)",
+          "pronunciation": "oo-BLOH",
+          "example": "Fermez le hublot."
+        },
+        {
+          "id": "t75",
+          "french": "soute",
+          "english": "cargo hold",
+          "pronunciation": "SOOT",
+          "example": "Les bagages sont en soute."
+        },
+        {
+          "id": "t76",
+          "french": "cabine",
+          "english": "cabin",
+          "pronunciation": "ka-BEEN",
+          "example": "La cabine de l'avion."
+        },
+        {
+          "id": "t77",
+          "french": "classe économique",
+          "english": "economy class",
+          "pronunciation": "klas ay-ko-no-MEEK",
+          "example": "Un billet en classe économique."
+        },
+        {
+          "id": "t78",
+          "french": "classe affaires",
+          "english": "business class",
+          "pronunciation": "klas a-FEHR",
+          "example": "Voyager en classe affaires."
+        },
+        {
+          "id": "t79",
+          "french": "première classe",
+          "english": "first class",
+          "pronunciation": "pruh-myehr KLAS",
+          "example": "Un siège en première classe."
+        },
+        {
+          "id": "t80",
+          "french": "navette",
+          "english": "shuttle",
+          "pronunciation": "na-VET",
+          "example": "La navette aéroport."
+        },
+        {
+          "id": "t81",
+          "french": "autobus",
+          "english": "bus",
+          "pronunciation": "oh-to-BOOS",
+          "example": "Prendre l'autobus."
+        },
+        {
+          "id": "t82",
+          "french": "tramway",
+          "english": "tram / streetcar",
+          "pronunciation": "tram-WAY",
+          "example": "Le tramway passe toutes les dix minutes."
+        },
+        {
+          "id": "t83",
+          "french": "tram",
+          "english": "tram",
+          "pronunciation": "TRAM",
+          "example": "Prendre le tram."
+        },
+        {
+          "id": "t84",
+          "french": "trolleybus",
+          "english": "trolleybus",
+          "pronunciation": "trol-ay-BOOS",
+          "example": "Le trolleybus est électrique."
+        },
+        {
+          "id": "t85",
+          "french": "véhicule",
+          "english": "vehicle",
+          "pronunciation": "vay-ee-KOOL",
+          "example": "Quel type de véhicule?"
+        },
+        {
+          "id": "t86",
+          "french": "conduire",
+          "english": "to drive",
+          "pronunciation": "kon-DWEER",
+          "example": "Je sais conduire."
+        },
+        {
+          "id": "t87",
+          "french": "chauffeur",
+          "english": "driver",
+          "pronunciation": "sho-FUHR",
+          "example": "Le chauffeur de taxi."
+        },
+        {
+          "id": "t88",
+          "french": "conducteur",
+          "english": "driver / conductor",
+          "pronunciation": "kon-dook-TUHR",
+          "example": "Le conducteur du bus."
+        },
+        {
+          "id": "t89",
+          "french": "passager",
+          "english": "passenger",
+          "pronunciation": "pa-sa-ZHAY",
+          "example": "Tous les passagers sont à bord."
+        },
+        {
+          "id": "t90",
+          "french": "voyageur",
+          "english": "traveler",
+          "pronunciation": "vwa-ya-ZHUHR",
+          "example": "Les voyageurs attendent."
+        },
+        {
+          "id": "t91",
+          "french": "trafic",
+          "english": "traffic",
+          "pronunciation": "tra-FEEK",
+          "example": "Il y a beaucoup de trafic."
+        },
+        {
+          "id": "t92",
+          "french": "embouteillage",
+          "english": "traffic jam",
+          "pronunciation": "on-boo-tay-YAZH",
+          "example": "Il y a un embouteillage."
+        },
+        {
+          "id": "t93",
+          "french": "bouchon",
+          "english": "traffic jam",
+          "pronunciation": "boo-SHON",
+          "example": "Il y a un bouchon sur l'autoroute."
+        },
+        {
+          "id": "t94",
+          "french": "autoroute",
+          "english": "highway / motorway",
+          "pronunciation": "oh-to-ROOT",
+          "example": "Prendre l'autoroute."
+        },
+        {
+          "id": "t95",
+          "french": "route nationale",
+          "english": "national road",
+          "pronunciation": "ROOT na-syo-NAL",
+          "example": "La route nationale 7."
+        },
+        {
+          "id": "t96",
+          "french": "chemin",
+          "english": "path / way",
+          "pronunciation": "shuh-MAN",
+          "example": "Un chemin de campagne."
+        },
+        {
+          "id": "t97",
+          "french": "sentier",
+          "english": "path / trail",
+          "pronunciation": "son-TYAY",
+          "example": "Un sentier de randonnée."
+        },
+        {
+          "id": "t98",
+          "french": "piste",
+          "english": "track / trail",
+          "pronunciation": "PEEST",
+          "example": "Une piste cyclable."
+        },
+        {
+          "id": "t99",
+          "french": "traversée",
+          "english": "crossing",
+          "pronunciation": "tra-ver-SAY",
+          "example": "La traversée de la Manche."
+        },
+        {
+          "id": "t100",
+          "french": "croisière",
+          "english": "cruise",
+          "pronunciation": "krwa-ZYEHR",
+          "example": "Partir en croisière."
         }
       ]
     },
@@ -1386,6 +2436,356 @@
           "english": "heating",
           "pronunciation": "sho-FAZH",
           "example": "Le chauffage fonctionne?"
+        },
+        {
+          "id": "a51",
+          "french": "auberge de jeunesse",
+          "english": "youth hostel",
+          "pronunciation": "oh-BEHRZH duh zhuh-NES",
+          "example": "Une auberge de jeunesse économique."
+        },
+        {
+          "id": "a52",
+          "french": "gîte",
+          "english": "cottage / guesthouse",
+          "pronunciation": "ZHEET",
+          "example": "Louer un gîte rural."
+        },
+        {
+          "id": "a53",
+          "french": "chambre d'hôte",
+          "english": "bed and breakfast",
+          "pronunciation": "SHOM-bruh DOHT",
+          "example": "Une chambre d'hôte charmante."
+        },
+        {
+          "id": "a54",
+          "french": "appartement",
+          "english": "apartment",
+          "pronunciation": "a-par-tuh-MON",
+          "example": "Louer un appartement."
+        },
+        {
+          "id": "a55",
+          "french": "studio",
+          "english": "studio apartment",
+          "pronunciation": "stoo-DYOH",
+          "example": "Un studio pour une personne."
+        },
+        {
+          "id": "a56",
+          "french": "suite",
+          "english": "suite",
+          "pronunciation": "SWEET",
+          "example": "Une suite présidentielle."
+        },
+        {
+          "id": "a57",
+          "french": "villa",
+          "english": "villa",
+          "pronunciation": "vee-LA",
+          "example": "Louer une villa."
+        },
+        {
+          "id": "a58",
+          "french": "chalet",
+          "english": "chalet / cabin",
+          "pronunciation": "sha-LAY",
+          "example": "Un chalet en montagne."
+        },
+        {
+          "id": "a59",
+          "french": "camping",
+          "english": "campground",
+          "pronunciation": "kam-PEENG",
+          "example": "Où est le camping?"
+        },
+        {
+          "id": "a60",
+          "french": "tente",
+          "english": "tent",
+          "pronunciation": "TONT",
+          "example": "Monter une tente."
+        },
+        {
+          "id": "a61",
+          "french": "caravane",
+          "english": "caravan / RV",
+          "pronunciation": "ka-ra-VAN",
+          "example": "Une caravane de location."
+        },
+        {
+          "id": "a62",
+          "french": "réceptionniste",
+          "english": "receptionist",
+          "pronunciation": "ray-sep-syo-NEEST",
+          "example": "Le réceptionniste est très serviable."
+        },
+        {
+          "id": "a63",
+          "french": "concierge",
+          "english": "concierge",
+          "pronunciation": "kon-SYEHRZH",
+          "example": "Le concierge peut vous aider."
+        },
+        {
+          "id": "a64",
+          "french": "femme de chambre",
+          "english": "maid / housekeeper",
+          "pronunciation": "fam duh SHOM-bruh",
+          "example": "La femme de chambre nettoie la chambre."
+        },
+        {
+          "id": "a65",
+          "french": "valet",
+          "english": "valet / bellhop",
+          "pronunciation": "va-LAY",
+          "example": "Le valet porte les bagages."
+        },
+        {
+          "id": "a66",
+          "french": "bagagiste",
+          "english": "porter / baggage handler",
+          "pronunciation": "ba-ga-ZHEEST",
+          "example": "Le bagagiste vous aidera."
+        },
+        {
+          "id": "a67",
+          "french": "clé magnétique",
+          "english": "key card",
+          "pronunciation": "KLAY ma-nyay-TEEK",
+          "example": "Votre clé magnétique."
+        },
+        {
+          "id": "a68",
+          "french": "carte d'accès",
+          "english": "access card",
+          "pronunciation": "kart da-KES",
+          "example": "Utilisez votre carte d'accès."
+        },
+        {
+          "id": "a69",
+          "french": "code",
+          "english": "code",
+          "pronunciation": "KOD",
+          "example": "Quel est le code de la chambre?"
+        },
+        {
+          "id": "a70",
+          "french": "étage",
+          "english": "floor / story",
+          "pronunciation": "ay-TAZH",
+          "example": "À quel étage?"
+        },
+        {
+          "id": "a71",
+          "french": "rez-de-chaussée",
+          "english": "ground floor",
+          "pronunciation": "ray duh sho-SAY",
+          "example": "Au rez-de-chaussée."
+        },
+        {
+          "id": "a72",
+          "french": "premier étage",
+          "english": "first floor",
+          "pronunciation": "pruh-myehr ay-TAZH",
+          "example": "Au premier étage."
+        },
+        {
+          "id": "a73",
+          "french": "dernier étage",
+          "english": "top floor",
+          "pronunciation": "dehr-nyay ay-TAZH",
+          "example": "Au dernier étage."
+        },
+        {
+          "id": "a74",
+          "french": "couloir",
+          "english": "hallway / corridor",
+          "pronunciation": "koo-LWAHR",
+          "example": "Le couloir est à droite."
+        },
+        {
+          "id": "a75",
+          "french": "porte",
+          "english": "door",
+          "pronunciation": "PORT",
+          "example": "La porte de la chambre."
+        },
+        {
+          "id": "a76",
+          "french": "serrure",
+          "english": "lock",
+          "pronunciation": "seh-ROOR",
+          "example": "La serrure fonctionne?"
+        },
+        {
+          "id": "a77",
+          "french": "peignoir",
+          "english": "bathrobe",
+          "pronunciation": "pay-NWAHR",
+          "example": "Un peignoir dans la salle de bain."
+        },
+        {
+          "id": "a78",
+          "french": "serviette",
+          "english": "towel",
+          "pronunciation": "ser-vyet",
+          "example": "Des serviettes propres."
+        },
+        {
+          "id": "a79",
+          "french": "savon",
+          "english": "soap",
+          "pronunciation": "sa-VON",
+          "example": "Du savon dans la salle de bain."
+        },
+        {
+          "id": "a80",
+          "french": "shampooing",
+          "english": "shampoo",
+          "pronunciation": "sham-PWAN",
+          "example": "Du shampooing et après-shampooing."
+        },
+        {
+          "id": "a81",
+          "french": "gel douche",
+          "english": "shower gel",
+          "pronunciation": "zhel DOOSH",
+          "example": "Du gel douche disponible."
+        },
+        {
+          "id": "a82",
+          "french": "sèche-cheveux",
+          "english": "hair dryer",
+          "pronunciation": "sesh shuh-VUH",
+          "example": "Où est le sèche-cheveux?"
+        },
+        {
+          "id": "a83",
+          "french": "miroir",
+          "english": "mirror",
+          "pronunciation": "mee-RWAHR",
+          "example": "Un grand miroir dans la chambre."
+        },
+        {
+          "id": "a84",
+          "french": "lavabo",
+          "english": "sink / washbasin",
+          "pronunciation": "la-va-BOH",
+          "example": "Le lavabo est dans la salle de bain."
+        },
+        {
+          "id": "a85",
+          "french": "toilettes",
+          "english": "toilet / restroom",
+          "pronunciation": "twa-LET",
+          "example": "Où sont les toilettes?"
+        },
+        {
+          "id": "a86",
+          "french": "WC",
+          "english": "WC / restroom",
+          "pronunciation": "doo-bluh vay say",
+          "example": "Où sont les WC?"
+        },
+        {
+          "id": "a87",
+          "french": "papier toilette",
+          "english": "toilet paper",
+          "pronunciation": "pa-PYAY twa-LET",
+          "example": "Il n'y a plus de papier toilette."
+        },
+        {
+          "id": "a88",
+          "french": "rideau",
+          "english": "curtain",
+          "pronunciation": "ree-DOH",
+          "example": "Fermez les rideaux."
+        },
+        {
+          "id": "a89",
+          "french": "store",
+          "english": "blind / shade",
+          "pronunciation": "STOR",
+          "example": "Baisser le store."
+        },
+        {
+          "id": "a90",
+          "french": "lampadaire",
+          "english": "floor lamp",
+          "pronunciation": "lam-pa-DEHR",
+          "example": "Allumer le lampadaire."
+        },
+        {
+          "id": "a91",
+          "french": "lampe de chevet",
+          "english": "bedside lamp",
+          "pronunciation": "LAMP duh shuh-VAY",
+          "example": "La lampe de chevet."
+        },
+        {
+          "id": "a92",
+          "french": "interrupteur",
+          "english": "light switch",
+          "pronunciation": "an-ter-rup-TUHR",
+          "example": "Où est l'interrupteur?"
+        },
+        {
+          "id": "a93",
+          "french": "prise",
+          "english": "outlet / socket",
+          "pronunciation": "PREEZ",
+          "example": "Où est la prise électrique?"
+        },
+        {
+          "id": "a94",
+          "french": "chargeur",
+          "english": "charger",
+          "pronunciation": "shar-ZHUHR",
+          "example": "J'ai besoin d'un chargeur."
+        },
+        {
+          "id": "a95",
+          "french": "adaptateur",
+          "english": "adapter",
+          "pronunciation": "a-dap-ta-TUHR",
+          "example": "Un adaptateur pour les prises."
+        },
+        {
+          "id": "a96",
+          "french": "fenêtre",
+          "english": "window",
+          "pronunciation": "fuh-NET-ruh",
+          "example": "Ouvrir la fenêtre."
+        },
+        {
+          "id": "a97",
+          "french": "volet",
+          "english": "shutter",
+          "pronunciation": "vo-LAY",
+          "example": "Fermer les volets."
+        },
+        {
+          "id": "a98",
+          "french": "terrasse",
+          "english": "terrace / balcony",
+          "pronunciation": "teh-RAS",
+          "example": "Une chambre avec terrasse."
+        },
+        {
+          "id": "a99",
+          "french": "jardin",
+          "english": "garden",
+          "pronunciation": "zhar-DAN",
+          "example": "Une vue sur le jardin."
+        },
+        {
+          "id": "a100",
+          "french": "parking souterrain",
+          "english": "underground parking",
+          "pronunciation": "par-KEENG soo-teh-RAN",
+          "example": "Le parking souterrain est payant."
         }
       ]
     },
@@ -1742,6 +3142,356 @@
           "english": "pepper",
           "pronunciation": "PWA-vruh",
           "example": "Du poivre, s'il vous plaît."
+        },
+        {
+          "id": "d51",
+          "french": "moutarde",
+          "english": "mustard",
+          "pronunciation": "moo-TARD",
+          "example": "De la moutarde, s'il vous plaît."
+        },
+        {
+          "id": "d52",
+          "french": "ketchup",
+          "english": "ketchup",
+          "pronunciation": "ket-CHOOP",
+          "example": "Du ketchup, s'il vous plaît."
+        },
+        {
+          "id": "d53",
+          "french": "mayonnaise",
+          "english": "mayonnaise",
+          "pronunciation": "ma-yo-NAYZ",
+          "example": "De la mayonnaise."
+        },
+        {
+          "id": "d54",
+          "french": "vinaigrette",
+          "english": "vinaigrette",
+          "pronunciation": "vee-nay-GRET",
+          "example": "Une vinaigrette à l'huile d'olive."
+        },
+        {
+          "id": "d55",
+          "french": "huile",
+          "english": "oil",
+          "pronunciation": "WEEL",
+          "example": "De l'huile d'olive."
+        },
+        {
+          "id": "d56",
+          "french": "vinaigre",
+          "english": "vinegar",
+          "pronunciation": "vee-NAY-gruh",
+          "example": "Du vinaigre balsamique."
+        },
+        {
+          "id": "d57",
+          "french": "beurre",
+          "english": "butter",
+          "pronunciation": "BUHR",
+          "example": "Du beurre, s'il vous plaît."
+        },
+        {
+          "id": "d58",
+          "french": "margarine",
+          "english": "margarine",
+          "pronunciation": "mar-ga-REEN",
+          "example": "De la margarine."
+        },
+        {
+          "id": "d59",
+          "french": "confiture",
+          "english": "jam",
+          "pronunciation": "kon-fee-TOOR",
+          "example": "De la confiture de fraises."
+        },
+        {
+          "id": "d60",
+          "french": "miel",
+          "english": "honey",
+          "pronunciation": "MYEL",
+          "example": "Du miel, s'il vous plaît."
+        },
+        {
+          "id": "d61",
+          "french": "céréales",
+          "english": "cereal",
+          "pronunciation": "say-ray-AL",
+          "example": "Des céréales au petit déjeuner."
+        },
+        {
+          "id": "d62",
+          "french": "yaourt",
+          "english": "yogurt",
+          "pronunciation": "ya-OORT",
+          "example": "Un yaourt nature."
+        },
+        {
+          "id": "d63",
+          "french": "fromage blanc",
+          "english": "cottage cheese / fresh cheese",
+          "pronunciation": "fro-MAZH BLON",
+          "example": "Du fromage blanc."
+        },
+        {
+          "id": "d64",
+          "french": "œuf",
+          "english": "egg",
+          "pronunciation": "UHF",
+          "example": "Un œuf à la coque."
+        },
+        {
+          "id": "d65",
+          "french": "omelette",
+          "english": "omelet",
+          "pronunciation": "om-LET",
+          "example": "Une omelette aux champignons."
+        },
+        {
+          "id": "d66",
+          "french": "bacon",
+          "english": "bacon",
+          "pronunciation": "ba-KON",
+          "example": "Du bacon croustillant."
+        },
+        {
+          "id": "d67",
+          "french": "saucisse",
+          "english": "sausage",
+          "pronunciation": "so-SEES",
+          "example": "Des saucisses grillées."
+        },
+        {
+          "id": "d68",
+          "french": "jambon",
+          "english": "ham",
+          "pronunciation": "zhon-BON",
+          "example": "Du jambon de Paris."
+        },
+        {
+          "id": "d69",
+          "french": "pâté",
+          "english": "pâté",
+          "pronunciation": "pa-TAY",
+          "example": "Du pâté de campagne."
+        },
+        {
+          "id": "d70",
+          "french": "saumon",
+          "english": "salmon",
+          "pronunciation": "soh-MON",
+          "example": "Du saumon fumé."
+        },
+        {
+          "id": "d71",
+          "french": "thon",
+          "english": "tuna",
+          "pronunciation": "TON",
+          "example": "Du thon en conserve."
+        },
+        {
+          "id": "d72",
+          "french": "crevette",
+          "english": "shrimp",
+          "pronunciation": "kruh-VET",
+          "example": "Des crevettes grillées."
+        },
+        {
+          "id": "d73",
+          "french": "huître",
+          "english": "oyster",
+          "pronunciation": "WEET-ruh",
+          "example": "Des huîtres fraîches."
+        },
+        {
+          "id": "d74",
+          "french": "moule",
+          "english": "mussel",
+          "pronunciation": "MOOL",
+          "example": "Des moules marinières."
+        },
+        {
+          "id": "d75",
+          "french": "calmar",
+          "english": "squid",
+          "pronunciation": "kal-MAR",
+          "example": "Du calmar grillé."
+        },
+        {
+          "id": "d76",
+          "french": "pomme de terre",
+          "english": "potato",
+          "pronunciation": "pom duh TEHR",
+          "example": "Des pommes de terre frites."
+        },
+        {
+          "id": "d77",
+          "french": "riz",
+          "english": "rice",
+          "pronunciation": "REE",
+          "example": "Du riz blanc."
+        },
+        {
+          "id": "d78",
+          "french": "pâtes",
+          "english": "pasta",
+          "pronunciation": "PAT",
+          "example": "Des pâtes à la carbonara."
+        },
+        {
+          "id": "d79",
+          "french": "nouilles",
+          "english": "noodles",
+          "pronunciation": "noo-EE",
+          "example": "Des nouilles chinoises."
+        },
+        {
+          "id": "d80",
+          "french": "pain de mie",
+          "english": "sandwich bread",
+          "pronunciation": "pan duh MEE",
+          "example": "Du pain de mie."
+        },
+        {
+          "id": "d81",
+          "french": "baguette",
+          "english": "baguette",
+          "pronunciation": "ba-GET",
+          "example": "Une baguette fraîche."
+        },
+        {
+          "id": "d82",
+          "french": "croissant",
+          "english": "croissant",
+          "pronunciation": "krwa-SON",
+          "example": "Un croissant au beurre."
+        },
+        {
+          "id": "d83",
+          "french": "brioche",
+          "english": "brioche",
+          "pronunciation": "bree-OSH",
+          "example": "Une brioche pour le petit déjeuner."
+        },
+        {
+          "id": "d84",
+          "french": "tarte",
+          "english": "tart / pie",
+          "pronunciation": "TART",
+          "example": "Une tarte aux pommes."
+        },
+        {
+          "id": "d85",
+          "french": "éclair",
+          "english": "éclair",
+          "pronunciation": "ay-KLEHR",
+          "example": "Un éclair au chocolat."
+        },
+        {
+          "id": "d86",
+          "french": "macaron",
+          "english": "macaron",
+          "pronunciation": "ma-ka-RON",
+          "example": "Un macaron à la framboise."
+        },
+        {
+          "id": "d87",
+          "french": "crème brûlée",
+          "english": "crème brûlée",
+          "pronunciation": "krem broo-LAY",
+          "example": "Une crème brûlée délicieuse."
+        },
+        {
+          "id": "d88",
+          "french": "mousse",
+          "english": "mousse",
+          "pronunciation": "MOOS",
+          "example": "Une mousse au chocolat."
+        },
+        {
+          "id": "d89",
+          "french": "sorbet",
+          "english": "sorbet",
+          "pronunciation": "sor-BAY",
+          "example": "Un sorbet au citron."
+        },
+        {
+          "id": "d90",
+          "french": "café au lait",
+          "english": "coffee with milk",
+          "pronunciation": "ka-FAY oh LAY",
+          "example": "Un café au lait, s'il vous plaît."
+        },
+        {
+          "id": "d91",
+          "french": "cappuccino",
+          "english": "cappuccino",
+          "pronunciation": "ka-poo-CHEE-no",
+          "example": "Un cappuccino, s'il vous plaît."
+        },
+        {
+          "id": "d92",
+          "french": "espresso",
+          "english": "espresso",
+          "pronunciation": "es-PRES-oh",
+          "example": "Un espresso, s'il vous plaît."
+        },
+        {
+          "id": "d93",
+          "french": "chocolat chaud",
+          "english": "hot chocolate",
+          "pronunciation": "sho-ko-LA SHOH",
+          "example": "Un chocolat chaud, s'il vous plaît."
+        },
+        {
+          "id": "d94",
+          "french": "jus",
+          "english": "juice",
+          "pronunciation": "ZHOO",
+          "example": "Un jus d'orange."
+        },
+        {
+          "id": "d95",
+          "french": "limonade",
+          "english": "lemonade",
+          "pronunciation": "lee-mo-NAD",
+          "example": "Une limonade fraîche."
+        },
+        {
+          "id": "d96",
+          "french": "eau gazeuse",
+          "english": "sparkling water",
+          "pronunciation": "oh ga-ZUHZ",
+          "example": "De l'eau gazeuse."
+        },
+        {
+          "id": "d97",
+          "french": "eau plate",
+          "english": "still water",
+          "pronunciation": "oh PLAT",
+          "example": "De l'eau plate."
+        },
+        {
+          "id": "d98",
+          "french": "champagne",
+          "english": "champagne",
+          "pronunciation": "sham-PAN-yuh",
+          "example": "Une bouteille de champagne."
+        },
+        {
+          "id": "d99",
+          "french": "cocktail",
+          "english": "cocktail",
+          "pronunciation": "kok-TAYL",
+          "example": "Un cocktail sans alcool."
+        },
+        {
+          "id": "d100",
+          "french": "digestif",
+          "english": "after-dinner drink",
+          "pronunciation": "dee-zhes-TEEF",
+          "example": "Un digestif, s'il vous plaît."
         }
       ]
     },
@@ -2098,6 +3848,356 @@
           "english": "department store",
           "pronunciation": "gron ma-ga-ZAN",
           "example": "Le grand magasin est ouvert?"
+        },
+        {
+          "id": "s51",
+          "french": "boutique",
+          "english": "boutique / shop",
+          "pronunciation": "boo-TEEK",
+          "example": "Une boutique de mode."
+        },
+        {
+          "id": "s52",
+          "french": "librairie",
+          "english": "bookstore",
+          "pronunciation": "lee-breh-REE",
+          "example": "Où est la librairie?"
+        },
+        {
+          "id": "s53",
+          "french": "pharmacie",
+          "english": "pharmacy",
+          "pronunciation": "far-ma-SEE",
+          "example": "Une pharmacie ouverte 24h."
+        },
+        {
+          "id": "s54",
+          "french": "boulangerie",
+          "english": "bakery",
+          "pronunciation": "boo-lon-zhuh-REE",
+          "example": "Acheter du pain à la boulangerie."
+        },
+        {
+          "id": "s55",
+          "french": "pâtisserie",
+          "english": "pastry shop",
+          "pronunciation": "pa-tees-REE",
+          "example": "Des gâteaux à la pâtisserie."
+        },
+        {
+          "id": "s56",
+          "french": "boucherie",
+          "english": "butcher shop",
+          "pronunciation": "boo-shuh-REE",
+          "example": "Acheter de la viande à la boucherie."
+        },
+        {
+          "id": "s57",
+          "french": "poissonnerie",
+          "english": "fish market",
+          "pronunciation": "pwa-so-REE",
+          "example": "Du poisson frais à la poissonnerie."
+        },
+        {
+          "id": "s58",
+          "french": "épicerie",
+          "english": "grocery store",
+          "pronunciation": "ay-pees-REE",
+          "example": "Une épicerie de quartier."
+        },
+        {
+          "id": "s59",
+          "french": "marché",
+          "english": "market",
+          "pronunciation": "mar-SHAY",
+          "example": "Aller au marché."
+        },
+        {
+          "id": "s60",
+          "french": "marché aux puces",
+          "english": "flea market",
+          "pronunciation": "mar-SHAY oh POOS",
+          "example": "Trouver des trésors au marché aux puces."
+        },
+        {
+          "id": "s61",
+          "french": "caisse",
+          "english": "cash register / checkout",
+          "pronunciation": "KES",
+          "example": "Où est la caisse?"
+        },
+        {
+          "id": "s62",
+          "french": "caissier",
+          "english": "cashier",
+          "pronunciation": "ke-SYAY",
+          "example": "Le caissier est très aimable."
+        },
+        {
+          "id": "s63",
+          "french": "caissière",
+          "english": "cashier (female)",
+          "pronunciation": "ke-SYEHR",
+          "example": "La caissière scanne les articles."
+        },
+        {
+          "id": "s64",
+          "french": "panier",
+          "english": "basket",
+          "pronunciation": "pa-NYAY",
+          "example": "Prendre un panier."
+        },
+        {
+          "id": "s65",
+          "french": "caddie",
+          "english": "shopping cart",
+          "pronunciation": "ka-DEE",
+          "example": "Pousser un caddie."
+        },
+        {
+          "id": "s66",
+          "french": "sac",
+          "english": "bag",
+          "pronunciation": "SAK",
+          "example": "Un sac en plastique ou en papier?"
+        },
+        {
+          "id": "s67",
+          "french": "emballage",
+          "english": "packaging / wrapping",
+          "pronunciation": "on-ba-LAZH",
+          "example": "L'emballage cadeau."
+        },
+        {
+          "id": "s68",
+          "french": "étiquette",
+          "english": "label / tag",
+          "pronunciation": "ay-tee-KET",
+          "example": "Lire l'étiquette du prix."
+        },
+        {
+          "id": "s69",
+          "french": "code-barres",
+          "english": "barcode",
+          "pronunciation": "kod BAR",
+          "example": "Scanner le code-barres."
+        },
+        {
+          "id": "s70",
+          "french": "promotion",
+          "english": "sale / promotion",
+          "pronunciation": "pro-mo-SYON",
+          "example": "Il y a une promotion cette semaine."
+        },
+        {
+          "id": "s71",
+          "french": "soldes",
+          "english": "sales",
+          "pronunciation": "SOLD",
+          "example": "Les soldes d'hiver."
+        },
+        {
+          "id": "s72",
+          "french": "réduction",
+          "english": "discount / reduction",
+          "pronunciation": "ray-dook-SYON",
+          "example": "Une réduction de 20%."
+        },
+        {
+          "id": "s73",
+          "french": "rabais",
+          "english": "discount",
+          "pronunciation": "ra-BAY",
+          "example": "Un rabais de 10 euros."
+        },
+        {
+          "id": "s74",
+          "french": "remise",
+          "english": "discount / rebate",
+          "pronunciation": "ruh-MEEZ",
+          "example": "Une remise de 15%."
+        },
+        {
+          "id": "s75",
+          "french": "bon d'achat",
+          "english": "gift card / voucher",
+          "pronunciation": "bon da-SHA",
+          "example": "Utiliser un bon d'achat."
+        },
+        {
+          "id": "s76",
+          "french": "carte de fidélité",
+          "english": "loyalty card",
+          "pronunciation": "kart duh fee-day-lee-TAY",
+          "example": "Avez-vous une carte de fidélité?"
+        },
+        {
+          "id": "s77",
+          "french": "point de vente",
+          "english": "point of sale",
+          "pronunciation": "pwan duh VONT",
+          "example": "Le point de vente est fermé."
+        },
+        {
+          "id": "s78",
+          "french": "rayon",
+          "english": "aisle / department",
+          "pronunciation": "ray-YON",
+          "example": "Dans quel rayon?"
+        },
+        {
+          "id": "s79",
+          "french": "étagère",
+          "english": "shelf",
+          "pronunciation": "ay-ta-ZHEHR",
+          "example": "Sur quelle étagère?"
+        },
+        {
+          "id": "s80",
+          "french": "vitrine",
+          "english": "shop window / display",
+          "pronunciation": "vee-TREEN",
+          "example": "Regarder la vitrine."
+        },
+        {
+          "id": "s81",
+          "french": "essayage",
+          "english": "trying on",
+          "pronunciation": "es-say-YAZH",
+          "example": "Où est la cabine d'essayage?"
+        },
+        {
+          "id": "s82",
+          "french": "cabine d'essayage",
+          "english": "fitting room",
+          "pronunciation": "ka-BEEN des-say-YAZH",
+          "example": "La cabine d'essayage est libre?"
+        },
+        {
+          "id": "s83",
+          "french": "taille",
+          "english": "size",
+          "pronunciation": "TAY",
+          "example": "Quelle taille faites-vous?"
+        },
+        {
+          "id": "s84",
+          "french": "pointure",
+          "english": "shoe size",
+          "pronunciation": "pwan-TOOR",
+          "example": "Quelle est votre pointure?"
+        },
+        {
+          "id": "s85",
+          "french": "couleur",
+          "english": "color",
+          "pronunciation": "koo-LUHR",
+          "example": "Quelle couleur préférez-vous?"
+        },
+        {
+          "id": "s86",
+          "french": "modèle",
+          "english": "model / style",
+          "pronunciation": "mo-DEL",
+          "example": "Avez-vous ce modèle en bleu?"
+        },
+        {
+          "id": "s87",
+          "french": "marque",
+          "english": "brand",
+          "pronunciation": "MARK",
+          "example": "Quelle marque préférez-vous?"
+        },
+        {
+          "id": "s88",
+          "french": "article",
+          "english": "item / article",
+          "pronunciation": "ar-TEE-kluh",
+          "example": "Cet article est en solde."
+        },
+        {
+          "id": "s89",
+          "french": "produit",
+          "english": "product",
+          "pronunciation": "pro-DWEE",
+          "example": "Ce produit est de qualité."
+        },
+        {
+          "id": "s90",
+          "french": "marchandise",
+          "english": "merchandise / goods",
+          "pronunciation": "mar-shon-DEEZ",
+          "example": "La marchandise est arrivée."
+        },
+        {
+          "id": "s91",
+          "french": "stock",
+          "english": "stock / inventory",
+          "pronunciation": "STOK",
+          "example": "Nous n'avons plus en stock."
+        },
+        {
+          "id": "s92",
+          "french": "rupture de stock",
+          "english": "out of stock",
+          "pronunciation": "roop-TOOR duh STOK",
+          "example": "Désolé, rupture de stock."
+        },
+        {
+          "id": "s93",
+          "french": "commande",
+          "english": "order",
+          "pronunciation": "ko-MOND",
+          "example": "Passer une commande."
+        },
+        {
+          "id": "s94",
+          "french": "livraison",
+          "english": "delivery",
+          "pronunciation": "lee-vray-ZON",
+          "example": "La livraison est gratuite?"
+        },
+        {
+          "id": "s95",
+          "french": "retour",
+          "english": "return",
+          "pronunciation": "ruh-TOOR",
+          "example": "Puis-je faire un retour?"
+        },
+        {
+          "id": "s96",
+          "french": "échange",
+          "english": "exchange",
+          "pronunciation": "ay-SHONZH",
+          "example": "Puis-je faire un échange?"
+        },
+        {
+          "id": "s97",
+          "french": "remboursement",
+          "english": "refund",
+          "pronunciation": "ron-boor-suh-MON",
+          "example": "Demander un remboursement."
+        },
+        {
+          "id": "s98",
+          "french": "garantie",
+          "english": "warranty / guarantee",
+          "pronunciation": "ga-ron-TEE",
+          "example": "Combien de temps la garantie?"
+        },
+        {
+          "id": "s99",
+          "french": "facture",
+          "english": "invoice / receipt",
+          "pronunciation": "fak-TOOR",
+          "example": "Puis-je avoir la facture?"
+        },
+        {
+          "id": "s100",
+          "french": "ticket de caisse",
+          "english": "receipt",
+          "pronunciation": "tee-KAY duh KES",
+          "example": "Gardez votre ticket de caisse."
         }
       ]
     },
@@ -2454,6 +4554,356 @@
           "english": "route / way",
           "pronunciation": "ee-tee-nay-REHR",
           "example": "Quel est l'itinéraire le plus court?"
+        },
+        {
+          "id": "dir51",
+          "french": "chemin de traverse",
+          "english": "shortcut",
+          "pronunciation": "shuh-MAN duh tra-VEHRZ",
+          "example": "Prendre un chemin de traverse."
+        },
+        {
+          "id": "dir52",
+          "french": "impasse",
+          "english": "dead end",
+          "pronunciation": "am-PAS",
+          "example": "C'est une impasse."
+        },
+        {
+          "id": "dir53",
+          "french": "cul-de-sac",
+          "english": "dead end",
+          "pronunciation": "kool duh SAK",
+          "example": "Un cul-de-sac."
+        },
+        {
+          "id": "dir54",
+          "french": "carrefour",
+          "english": "intersection / crossroads",
+          "pronunciation": "kar-FOOR",
+          "example": "Au carrefour, tournez à droite."
+        },
+        {
+          "id": "dir55",
+          "french": "rond-point",
+          "english": "roundabout",
+          "pronunciation": "ron PWAN",
+          "example": "Prendre le deuxième sortie au rond-point."
+        },
+        {
+          "id": "dir56",
+          "french": "giratoire",
+          "english": "roundabout",
+          "pronunciation": "zhee-ra-TWAHR",
+          "example": "Au giratoire, prenez la troisième sortie."
+        },
+        {
+          "id": "dir57",
+          "french": "pont",
+          "english": "bridge",
+          "pronunciation": "PON",
+          "example": "Traverser le pont."
+        },
+        {
+          "id": "dir58",
+          "french": "tunnel",
+          "english": "tunnel",
+          "pronunciation": "too-NEL",
+          "example": "Le tunnel est fermé."
+        },
+        {
+          "id": "dir59",
+          "french": "passage souterrain",
+          "english": "underground passage",
+          "pronunciation": "pa-SAZH soo-teh-RAN",
+          "example": "Utiliser le passage souterrain."
+        },
+        {
+          "id": "dir60",
+          "french": "passage piéton",
+          "english": "pedestrian crossing",
+          "pronunciation": "pa-SAZH pyay-TON",
+          "example": "Traverser au passage piéton."
+        },
+        {
+          "id": "dir61",
+          "french": "feu",
+          "english": "traffic light",
+          "pronunciation": "FUH",
+          "example": "Attendre le feu vert."
+        },
+        {
+          "id": "dir62",
+          "french": "feu rouge",
+          "english": "red light",
+          "pronunciation": "fuh ROOZH",
+          "example": "S'arrêter au feu rouge."
+        },
+        {
+          "id": "dir63",
+          "french": "feu vert",
+          "english": "green light",
+          "pronunciation": "fuh VEHR",
+          "example": "Passer au feu vert."
+        },
+        {
+          "id": "dir64",
+          "french": "feu orange",
+          "english": "yellow light",
+          "pronunciation": "fuh o-RONZH",
+          "example": "Le feu orange signifie attention."
+        },
+        {
+          "id": "dir65",
+          "french": "panneau",
+          "english": "sign / panel",
+          "pronunciation": "pa-NOH",
+          "example": "Lire le panneau indicateur."
+        },
+        {
+          "id": "dir66",
+          "french": "panneau de signalisation",
+          "english": "road sign",
+          "pronunciation": "pa-NOH duh see-nya-lee-za-SYON",
+          "example": "Respecter les panneaux de signalisation."
+        },
+        {
+          "id": "dir67",
+          "french": "stop",
+          "english": "stop",
+          "pronunciation": "STOP",
+          "example": "S'arrêter au panneau stop."
+        },
+        {
+          "id": "dir68",
+          "french": "cédez le passage",
+          "english": "yield / give way",
+          "pronunciation": "say-DAY luh pa-SAZH",
+          "example": "Cédez le passage."
+        },
+        {
+          "id": "dir69",
+          "french": "sens unique",
+          "english": "one way",
+          "pronunciation": "sons oo-NEEK",
+          "example": "Rue en sens unique."
+        },
+        {
+          "id": "dir70",
+          "french": "sens interdit",
+          "english": "no entry",
+          "pronunciation": "sons an-tehr-DEE",
+          "example": "Sens interdit."
+        },
+        {
+          "id": "dir71",
+          "french": "limitation de vitesse",
+          "english": "speed limit",
+          "pronunciation": "lee-mee-ta-SYON duh vee-TES",
+          "example": "Limitation de vitesse: 50 km/h."
+        },
+        {
+          "id": "dir72",
+          "french": "zone piétonne",
+          "english": "pedestrian zone",
+          "pronunciation": "zon pyay-TON",
+          "example": "Entrer dans la zone piétonne."
+        },
+        {
+          "id": "dir73",
+          "french": "zone de stationnement",
+          "english": "parking zone",
+          "pronunciation": "zon duh sta-syo-nuh-MON",
+          "example": "Zone de stationnement payant."
+        },
+        {
+          "id": "dir74",
+          "french": "stationnement interdit",
+          "english": "no parking",
+          "pronunciation": "sta-syo-nuh-MON an-tehr-DEE",
+          "example": "Stationnement interdit."
+        },
+        {
+          "id": "dir75",
+          "french": "déviation",
+          "english": "detour",
+          "pronunciation": "day-vya-SYON",
+          "example": "Suivre la déviation."
+        },
+        {
+          "id": "dir76",
+          "french": "détour",
+          "english": "detour",
+          "pronunciation": "day-TOOR",
+          "example": "Prendre un détour."
+        },
+        {
+          "id": "dir77",
+          "french": "barrage",
+          "english": "roadblock / barrier",
+          "pronunciation": "ba-RAZH",
+          "example": "Il y a un barrage sur la route."
+        },
+        {
+          "id": "dir78",
+          "french": "travaux",
+          "english": "roadworks",
+          "pronunciation": "tra-VOH",
+          "example": "Attention, travaux en cours."
+        },
+        {
+          "id": "dir79",
+          "french": "chaussée glissante",
+          "english": "slippery road",
+          "pronunciation": "sho-SAY glee-SONT",
+          "example": "Chaussée glissante."
+        },
+        {
+          "id": "dir80",
+          "french": "virage",
+          "english": "bend / curve",
+          "pronunciation": "vee-RAZH",
+          "example": "Attention au virage dangereux."
+        },
+        {
+          "id": "dir81",
+          "french": "descente",
+          "english": "descent / downhill",
+          "pronunciation": "day-SONT",
+          "example": "Ralentir dans la descente."
+        },
+        {
+          "id": "dir82",
+          "french": "montée",
+          "english": "ascent / uphill",
+          "pronunciation": "mon-TAY",
+          "example": "Une montée raide."
+        },
+        {
+          "id": "dir83",
+          "french": "côte",
+          "english": "slope / hill",
+          "pronunciation": "KOT",
+          "example": "Grimper la côte."
+        },
+        {
+          "id": "dir84",
+          "french": "sommet",
+          "english": "summit / top",
+          "pronunciation": "so-MAY",
+          "example": "Arriver au sommet de la colline."
+        },
+        {
+          "id": "dir85",
+          "french": "bas",
+          "english": "bottom / low",
+          "pronunciation": "BA",
+          "example": "En bas de la colline."
+        },
+        {
+          "id": "dir86",
+          "french": "haut",
+          "english": "top / high",
+          "pronunciation": "OH",
+          "example": "En haut de la rue."
+        },
+        {
+          "id": "dir87",
+          "french": "niveau",
+          "english": "level",
+          "pronunciation": "nee-VOH",
+          "example": "Au niveau de la gare."
+        },
+        {
+          "id": "dir88",
+          "french": "altitude",
+          "english": "altitude",
+          "pronunciation": "al-tee-TOOD",
+          "example": "Quelle est l'altitude?"
+        },
+        {
+          "id": "dir89",
+          "french": "latitude",
+          "english": "latitude",
+          "pronunciation": "la-tee-TOOD",
+          "example": "Les coordonnées GPS."
+        },
+        {
+          "id": "dir90",
+          "french": "longitude",
+          "english": "longitude",
+          "pronunciation": "lon-zhee-TOOD",
+          "example": "Les coordonnées de longitude."
+        },
+        {
+          "id": "dir91",
+          "french": "coordonnées",
+          "english": "coordinates",
+          "pronunciation": "ko-or-do-NAY",
+          "example": "Quelles sont les coordonnées GPS?"
+        },
+        {
+          "id": "dir92",
+          "french": "GPS",
+          "english": "GPS",
+          "pronunciation": "zhay pay es",
+          "example": "Utiliser le GPS."
+        },
+        {
+          "id": "dir93",
+          "french": "navigation",
+          "english": "navigation",
+          "pronunciation": "na-vee-ga-SYON",
+          "example": "La navigation par satellite."
+        },
+        {
+          "id": "dir94",
+          "french": "itinéraire bis",
+          "english": "alternative route",
+          "pronunciation": "ee-tee-nay-REHR BEES",
+          "example": "Prendre l'itinéraire bis."
+        },
+        {
+          "id": "dir95",
+          "french": "péage",
+          "english": "toll",
+          "pronunciation": "pay-AZH",
+          "example": "Où est le péage?"
+        },
+        {
+          "id": "dir96",
+          "french": "aire de repos",
+          "english": "rest area",
+          "pronunciation": "EHR duh ruh-POH",
+          "example": "S'arrêter à l'aire de repos."
+        },
+        {
+          "id": "dir97",
+          "french": "aire de service",
+          "english": "service area",
+          "pronunciation": "EHR duh ser-VEES",
+          "example": "Une aire de service avec restaurant."
+        },
+        {
+          "id": "dir98",
+          "french": "borne kilométrique",
+          "english": "mile marker / kilometer marker",
+          "pronunciation": "BORN kee-lo-may-TREEK",
+          "example": "Regarder la borne kilométrique."
+        },
+        {
+          "id": "dir99",
+          "french": "point de repère",
+          "english": "landmark",
+          "pronunciation": "pwan duh ruh-PEHR",
+          "example": "Utiliser l'église comme point de repère."
+        },
+        {
+          "id": "dir100",
+          "french": "repère",
+          "english": "landmark / reference point",
+          "pronunciation": "ruh-PEHR",
+          "example": "Un repère facile à reconnaître."
         }
       ]
     },
@@ -2809,6 +5259,356 @@
           "english": "insurance",
           "pronunciation": "a-soo-RONS",
           "example": "J'ai une assurance médicale."
+        },
+        {
+          "id": "e51",
+          "french": "assurance voyage",
+          "english": "travel insurance",
+          "pronunciation": "a-soo-RONS vwa-YAZH",
+          "example": "Avez-vous une assurance voyage?"
+        },
+        {
+          "id": "e52",
+          "french": "assurance maladie",
+          "english": "health insurance",
+          "pronunciation": "a-soo-RONS ma-la-DEE",
+          "example": "Ma carte d'assurance maladie."
+        },
+        {
+          "id": "e53",
+          "french": "carte vitale",
+          "english": "health insurance card",
+          "pronunciation": "kart vee-TAL",
+          "example": "Avez-vous votre carte vitale?"
+        },
+        {
+          "id": "e54",
+          "french": "carte européenne d'assurance maladie",
+          "english": "European health insurance card",
+          "pronunciation": "kart uh-ro-pay-EN da-soo-RONS ma-la-DEE",
+          "example": "Présenter la carte européenne d'assurance maladie."
+        },
+        {
+          "id": "e55",
+          "french": "ambulance",
+          "english": "ambulance",
+          "pronunciation": "on-boo-LONS",
+          "example": "Appeler une ambulance!"
+        },
+        {
+          "id": "e56",
+          "french": "SAMU",
+          "english": "emergency medical service",
+          "pronunciation": "sa-MOO",
+          "example": "Composer le 15 pour le SAMU."
+        },
+        {
+          "id": "e57",
+          "french": "pompiers",
+          "english": "firefighters",
+          "pronunciation": "pom-PYAY",
+          "example": "Appeler les pompiers au 18."
+        },
+        {
+          "id": "e58",
+          "french": "police",
+          "english": "police",
+          "pronunciation": "po-LEES",
+          "example": "Appeler la police au 17."
+        },
+        {
+          "id": "e59",
+          "french": "gendarmerie",
+          "english": "police (rural)",
+          "pronunciation": "zhon-dar-muh-REE",
+          "example": "La gendarmerie est là."
+        },
+        {
+          "id": "e60",
+          "french": "commissariat",
+          "english": "police station",
+          "pronunciation": "ko-mee-sa-RYA",
+          "example": "Aller au commissariat."
+        },
+        {
+          "id": "e61",
+          "french": "poste de police",
+          "english": "police station",
+          "pronunciation": "POST duh po-LEES",
+          "example": "Où est le poste de police?"
+        },
+        {
+          "id": "e62",
+          "french": "agent de police",
+          "english": "police officer",
+          "pronunciation": "a-ZHON duh po-LEES",
+          "example": "Parler à un agent de police."
+        },
+        {
+          "id": "e63",
+          "french": "gendarme",
+          "english": "police officer (rural)",
+          "pronunciation": "zhon-DARM",
+          "example": "Un gendarme peut vous aider."
+        },
+        {
+          "id": "e64",
+          "french": "secours",
+          "english": "help / rescue",
+          "pronunciation": "suh-KOOR",
+          "example": "Au secours!"
+        },
+        {
+          "id": "e65",
+          "french": "aide",
+          "english": "help",
+          "pronunciation": "ED",
+          "example": "J'ai besoin d'aide!"
+        },
+        {
+          "id": "e66",
+          "french": "urgence",
+          "english": "emergency",
+          "pronunciation": "oor-ZHONS",
+          "example": "C'est une urgence!"
+        },
+        {
+          "id": "e67",
+          "french": "situation d'urgence",
+          "english": "emergency situation",
+          "pronunciation": "see-too-a-SYON door-ZHONS",
+          "example": "Nous sommes dans une situation d'urgence."
+        },
+        {
+          "id": "e68",
+          "french": "accident",
+          "english": "accident",
+          "pronunciation": "ak-see-DON",
+          "example": "Il y a eu un accident."
+        },
+        {
+          "id": "e69",
+          "french": "accident de la route",
+          "english": "road accident",
+          "pronunciation": "ak-see-DON duh la ROOT",
+          "example": "Un accident de la route."
+        },
+        {
+          "id": "e70",
+          "french": "blessé",
+          "english": "injured",
+          "pronunciation": "bleh-SAY",
+          "example": "Il y a des blessés."
+        },
+        {
+          "id": "e71",
+          "french": "blessure",
+          "english": "injury",
+          "pronunciation": "bleh-SOOR",
+          "example": "J'ai une blessure."
+        },
+        {
+          "id": "e72",
+          "french": "plaie",
+          "english": "wound",
+          "pronunciation": "PLAY",
+          "example": "Nettoyer la plaie."
+        },
+        {
+          "id": "e73",
+          "french": "saignement",
+          "english": "bleeding",
+          "pronunciation": "say-nyuh-MON",
+          "example": "Il y a un saignement."
+        },
+        {
+          "id": "e74",
+          "french": "saigner",
+          "english": "to bleed",
+          "pronunciation": "say-NYAY",
+          "example": "Je saigne."
+        },
+        {
+          "id": "e75",
+          "french": "fracture",
+          "english": "fracture",
+          "pronunciation": "frak-TOOR",
+          "example": "Une fracture du bras."
+        },
+        {
+          "id": "e76",
+          "french": "entorse",
+          "english": "sprain",
+          "pronunciation": "on-TORS",
+          "example": "J'ai une entorse à la cheville."
+        },
+        {
+          "id": "e77",
+          "french": "brûlure",
+          "english": "burn",
+          "pronunciation": "broo-LOOR",
+          "example": "J'ai une brûlure."
+        },
+        {
+          "id": "e78",
+          "french": "coupure",
+          "english": "cut",
+          "pronunciation": "koo-POOR",
+          "example": "Une coupure profonde."
+        },
+        {
+          "id": "e79",
+          "french": "évanouissement",
+          "english": "fainting",
+          "pronunciation": "ay-va-noo-ee-suh-MON",
+          "example": "Il y a eu un évanouissement."
+        },
+        {
+          "id": "e80",
+          "french": "s'évanouir",
+          "english": "to faint",
+          "pronunciation": "say-va-noo-EER",
+          "example": "Je me sens mal, je vais m'évanouir."
+        },
+        {
+          "id": "e81",
+          "french": "perte de conscience",
+          "english": "loss of consciousness",
+          "pronunciation": "PEHRT duh kon-SYONS",
+          "example": "Une perte de conscience."
+        },
+        {
+          "id": "e82",
+          "french": "crise cardiaque",
+          "english": "heart attack",
+          "pronunciation": "KREEZ kar-DYAK",
+          "example": "Appeler le SAMU, crise cardiaque!"
+        },
+        {
+          "id": "e83",
+          "french": "arrêt cardiaque",
+          "english": "cardiac arrest",
+          "pronunciation": "a-REH kar-DYAK",
+          "example": "Un arrêt cardiaque."
+        },
+        {
+          "id": "e84",
+          "french": "réanimation",
+          "english": "resuscitation",
+          "pronunciation": "ray-a-nee-ma-SYON",
+          "example": "La réanimation cardio-pulmonaire."
+        },
+        {
+          "id": "e85",
+          "french": "massage cardiaque",
+          "english": "chest compressions",
+          "pronunciation": "ma-SAZH kar-DYAK",
+          "example": "Effectuer un massage cardiaque."
+        },
+        {
+          "id": "e86",
+          "french": "bouche-à-bouche",
+          "english": "mouth-to-mouth",
+          "pronunciation": "boosh a BOOSH",
+          "example": "Le bouche-à-bouche."
+        },
+        {
+          "id": "e87",
+          "french": "défibrillateur",
+          "english": "defibrillator",
+          "pronunciation": "day-fee-bree-ya-TUHR",
+          "example": "Utiliser le défibrillateur."
+        },
+        {
+          "id": "e88",
+          "french": "brancard",
+          "english": "stretcher",
+          "pronunciation": "bron-KAR",
+          "example": "Mettre sur un brancard."
+        },
+        {
+          "id": "e89",
+          "french": "civière",
+          "english": "stretcher",
+          "pronunciation": "see-VYEHR",
+          "example": "Porter sur une civière."
+        },
+        {
+          "id": "e90",
+          "french": "salle d'urgence",
+          "english": "emergency room",
+          "pronunciation": "SAL door-ZHONS",
+          "example": "Aller à la salle d'urgence."
+        },
+        {
+          "id": "e91",
+          "french": "service des urgences",
+          "english": "emergency department",
+          "pronunciation": "ser-VEES day zoor-ZHONS",
+          "example": "Le service des urgences est au rez-de-chaussée."
+        },
+        {
+          "id": "e92",
+          "french": "chirurgie",
+          "english": "surgery",
+          "pronunciation": "shee-roor-ZHEE",
+          "example": "Une intervention chirurgicale."
+        },
+        {
+          "id": "e93",
+          "french": "opération",
+          "english": "operation / surgery",
+          "pronunciation": "o-peh-ra-SYON",
+          "example": "Une opération urgente."
+        },
+        {
+          "id": "e94",
+          "french": "anesthésie",
+          "english": "anesthesia",
+          "pronunciation": "a-nes-tay-ZEE",
+          "example": "Sous anesthésie générale."
+        },
+        {
+          "id": "e95",
+          "french": "saignement de nez",
+          "english": "nosebleed",
+          "pronunciation": "say-nyuh-MON duh NAY",
+          "example": "J'ai un saignement de nez."
+        },
+        {
+          "id": "e96",
+          "french": "piqûre",
+          "english": "injection / sting",
+          "pronunciation": "pee-KOOR",
+          "example": "Une piqûre d'insecte."
+        },
+        {
+          "id": "e97",
+          "french": "morsure",
+          "english": "bite",
+          "pronunciation": "mor-SOOR",
+          "example": "Une morsure de chien."
+        },
+        {
+          "id": "e98",
+          "french": "intoxication",
+          "english": "poisoning",
+          "pronunciation": "an-tok-see-ka-SYON",
+          "example": "Une intoxication alimentaire."
+        },
+        {
+          "id": "e99",
+          "french": "allergie",
+          "english": "allergy",
+          "pronunciation": "a-lehr-ZHEE",
+          "example": "J'ai une allergie aux arachides."
+        },
+        {
+          "id": "e100",
+          "french": "réaction allergique",
+          "english": "allergic reaction",
+          "pronunciation": "ray-ak-SYON a-lehr-ZHEEK",
+          "example": "Une réaction allergique grave."
         }
       ]
     }
