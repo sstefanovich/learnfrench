@@ -94,13 +94,14 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
     }
   }, [currentIndex, questions]);
   
-  const handleSpeak = (wordToSpeak = null) => {
-    let word = wordToSpeak;
+  const handleSpeak = (wordToSpeak) => {
+    // Only use wordToSpeak if it's a string (avoid using click Event when onClick={handleSpeak})
+    let word = typeof wordToSpeak === 'string' ? wordToSpeak : null;
     if (word == null && currentQuestion?.word) {
       const w = currentQuestion.word;
       word = typeof w.french === 'string' ? w.french : (w.french != null ? String(w.french) : null);
     }
-    if (word && typeof word === 'string' && isAvailable()) {
+    if (word && word.length > 0 && isAvailable()) {
       speak(word);
     }
   };
@@ -204,9 +205,10 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           <div className="question-word-header">
             <h3>{questionText}</h3>
             {isFrenchToEnglish && isAvailable() && (
-              <button 
+              <button
+                type="button"
                 className="speaker-button"
-                onClick={handleSpeak}
+                onClick={() => handleSpeak()}
                 aria-label="Listen to pronunciation"
                 title="Listen to pronunciation"
               >
@@ -223,7 +225,8 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
                 <p className="pronunciation">Pronunciation: /{questionPronunciation}/</p>
               )}
               {isAvailable() && (
-                <button 
+                <button
+                  type="button"
                   className="speaker-button"
                   onClick={() => handleSpeak()}
                   aria-label="Listen to French pronunciation"
@@ -258,19 +261,31 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           const frenchText = getDisplayText(answer.word, 'french');
           
           return (
-            <button
+            <div
               key={index}
+              role="button"
+              tabIndex={0}
               className={buttonClass}
-              onClick={() => handleAnswerSelect(answer)}
-              disabled={showResult}
+              onClick={showResult ? undefined : () => handleAnswerSelect(answer)}
+              onKeyDown={(e) => {
+                if (showResult) return;
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleAnswerSelect(answer);
+                }
+              }}
+              aria-disabled={showResult}
+              style={!showResult ? { cursor: 'pointer' } : undefined}
             >
               <div className="answer-content">
                 <span className="answer-text">{answerText}</span>
               </div>
               {!isFrenchToEnglish && isAvailable() && !showResult && (
                 <button
+                  type="button"
                   className="answer-speaker-button"
                   onClick={(e) => {
+                    e.preventDefault();
                     e.stopPropagation();
                     handleSpeak(frenchText);
                   }}
@@ -284,7 +299,7 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
               {showResult && answer === selectedAnswer && !answer.isCorrect && (
                 <span className="x-mark">✗</span>
               )}
-            </button>
+            </div>
           );
         })}
       </div>

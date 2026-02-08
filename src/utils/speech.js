@@ -41,10 +41,14 @@ export const speak = (text, options = {}) => {
     return;
   }
   
+  // Only speak strings (avoid [object Object] or errors from events/objects)
+  const textToSpeak = typeof text === 'string' ? text : (text != null ? String(text) : '');
+  if (!textToSpeak.trim()) return;
+  
   // Cancel any ongoing speech
   synth.cancel();
   
-  const utterance = new SpeechSynthesisUtterance(text);
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
   
   // Set language to French
   utterance.lang = 'fr-FR';

@@ -168,6 +168,8 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+  z-index: 2;
+  flex-shrink: 0;
 }
 
 .answer-speaker-button:hover {
