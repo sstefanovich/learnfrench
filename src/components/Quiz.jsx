@@ -95,8 +95,12 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
   }, [currentIndex, questions]);
   
   const handleSpeak = (wordToSpeak = null) => {
-    const word = wordToSpeak || (currentQuestion ? currentQuestion.word.french : null);
-    if (word && isAvailable()) {
+    let word = wordToSpeak;
+    if (word == null && currentQuestion?.word) {
+      const w = currentQuestion.word;
+      word = typeof w.french === 'string' ? w.french : (w.french != null ? String(w.french) : null);
+    }
+    if (word && typeof word === 'string' && isAvailable()) {
       speak(word);
     }
   };
@@ -166,9 +170,23 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
   }
   
   const isFrenchToEnglish = currentQuestion.questionType === 'french-to-english';
-  const questionText = isFrenchToEnglish 
-    ? currentQuestion.word.french 
-    : currentQuestion.word.english;
+  
+  // Ensure we always display a string (avoid "[object Object]" from malformed data)
+  const getDisplayText = (word, field) => {
+    const value = word?.[field];
+    if (value == null) return '';
+    if (typeof value === 'string') return value;
+    if (Array.isArray(value)) return value[0] ?? '';
+    return String(value);
+  };
+  
+  const getPronunciation = (word) => {
+    const p = word?.pronunciation;
+    return typeof p === 'string' ? p : null;
+  };
+  
+  const questionText = getDisplayText(currentQuestion.word, isFrenchToEnglish ? 'french' : 'english');
+  const questionPronunciation = getPronunciation(currentQuestion.word);
   
   return (
     <div className="quiz-container">
@@ -196,13 +214,13 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
               </button>
             )}
           </div>
-          {isFrenchToEnglish && currentQuestion.word.pronunciation && (
-            <p className="pronunciation">/{currentQuestion.word.pronunciation}/</p>
+          {isFrenchToEnglish && questionPronunciation && (
+            <p className="pronunciation">/{questionPronunciation}/</p>
           )}
           {!isFrenchToEnglish && (
             <div className="question-pronunciation-section">
-              {currentQuestion.word.pronunciation && (
-                <p className="pronunciation">Pronunciation: /{currentQuestion.word.pronunciation}/</p>
+              {questionPronunciation && (
+                <p className="pronunciation">Pronunciation: /{questionPronunciation}/</p>
               )}
               {isAvailable() && (
                 <button 
@@ -221,10 +239,10 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
       
       <div className="quiz-answers">
         {shuffledAnswers.map((answer, index) => {
-          const answerText = isFrenchToEnglish 
-            ? answer.word.english 
-            : answer.word.french;
-          const showPronunciation = !isFrenchToEnglish && answer.word.pronunciation;
+          const answerText = isFrenchToEnglish
+            ? getDisplayText(answer.word, 'english')
+            : getDisplayText(answer.word, 'french');
+          // Do not show pronunciation on answer options — it gives away the answer
           
           let buttonClass = 'quiz-button';
           if (showResult) {
@@ -237,6 +255,8 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
             }
           }
           
+          const frenchText = getDisplayText(answer.word, 'french');
+          
           return (
             <button
               key={index}
@@ -246,16 +266,13 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
             >
               <div className="answer-content">
                 <span className="answer-text">{answerText}</span>
-                {showPronunciation && (
-                  <span className="answer-pronunciation">/{answer.word.pronunciation}/</span>
-                )}
               </div>
               {!isFrenchToEnglish && isAvailable() && !showResult && (
                 <button
                   className="answer-speaker-button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleSpeak(answer.word.french);
+                    handleSpeak(frenchText);
                   }}
                   aria-label="Listen to pronunciation"
                   title="Listen to pronunciation"
@@ -277,15 +294,23 @@ function Quiz({ categoryId, onComplete, practiceWeakWords = false, difficulty = 
           {selectedAnswer?.isCorrect ? (
             <p>✓ Correct! Great job!</p>
           ) : (
-            <div>
-              <p>✗ Not quite. The correct answer is:</p>
-              <p className="correct-answer">
-                <strong>{shuffledAnswers.find(a => a.isCorrect).word[isFrenchToEnglish ? 'english' : 'french']}</strong>
-                {!isFrenchToEnglish && shuffledAnswers.find(a => a.isCorrect).word.pronunciation && (
-                  <span className="pronunciation-hint"> /{shuffledAnswers.find(a => a.isCorrect).word.pronunciation}/</span>
-                )}
-              </p>
-            </div>
+            (() => {
+              const correctAnswer = shuffledAnswers.find(a => a.isCorrect);
+              const correctWord = correctAnswer?.word;
+              const correctText = correctWord ? getDisplayText(correctWord, isFrenchToEnglish ? 'english' : 'french') : '';
+              const correctPron = correctWord ? getPronunciation(correctWord) : null;
+              return (
+                <div>
+                  <p>✗ Not quite. The correct answer is:</p>
+                  <p className="correct-answer">
+                    <strong>{correctText}</strong>
+                    {!isFrenchToEnglish && correctPron && (
+                      <span className="pronunciation-hint"> /{correctPron}/</span>
+                    )}
+                  </p>
+                </div>
+              );
+            })()
           )}
         </div>
       )}
